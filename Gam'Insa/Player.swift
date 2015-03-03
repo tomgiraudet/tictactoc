@@ -12,13 +12,12 @@ import UIKit
 
 class Player {
 
-    var name : String
-    var icon : UIImage
+    var name : String = ""
+    var icon : UIImageView = UIImageView(image: UIImage(named: "x"))
     
-    func init (){
-        name = "player"
-        icon = UIImage(named: <#String#>)
+    func createPlayer (name : String, img : String){
+        self.name = name
+        icon = UIImageView(image: UIImage(named: img))
     }
-    
     
 }

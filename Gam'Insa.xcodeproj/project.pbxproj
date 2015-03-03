@@ -15,6 +15,8 @@
 		2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AF1AA5F557003C46E2 /* LaunchScreen.xib */; };
 		2CEC22BD1AA5F557003C46E2 /* Gam_InsaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */; };
 		819A16EA1AA5FAD0002DA301 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A16E91AA5FAD0002DA301 /* Player.swift */; };
+		819A16EC1AA60076002DA301 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 819A16EB1AA60076002DA301 /* x.png */; };
+		819A16EE1AA6035D002DA301 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A16ED1AA6035D002DA301 /* Case.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		2CEC22BB1AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gam_InsaTests.swift; sourceTree = "<group>"; };
 		819A16E91AA5FAD0002DA301 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		819A16EB1AA60076002DA301 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		819A16ED1AA6035D002DA301 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +85,10 @@
 		2CEC22A01AA5F557003C46E2 /* Gam'Insa */ = {
 			isa = PBXGroup;
 			children = (
+				819A16EB1AA60076002DA301 /* x.png */,
 				2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */,
 				2CEC22A81AA5F557003C46E2 /* ViewController.swift */,
+				819A16ED1AA6035D002DA301 /* Case.swift */,
 				819A16E91AA5FAD0002DA301 /* Player.swift */,
 				2CEC22AA1AA5F557003C46E2 /* Main.storyboard */,
 				2CEC22AD1AA5F557003C46E2 /* Images.xcassets */,
@@ -198,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819A16EC1AA60076002DA301 /* x.png in Resources */,
 				2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */,
 				2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */,
 				2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */,
@@ -220,6 +227,7 @@
 			files = (
 				819A16EA1AA5FAD0002DA301 /* Player.swift in Sources */,
 				2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */,
+				819A16EE1AA6035D002DA301 /* Case.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
 			);
