@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentPlayer: Player
-    
-    enum CompassPoint {
+    //var currentPlayer: Player
+    enum StateGame {
         case playing
         case wino
         case winx
         case tie
     }
+    //var matrice: Player[][]
     
-    var game
+    
+
+    
+//    var game
 
     override func viewDidLoad() {
         super.viewDidLoad()
