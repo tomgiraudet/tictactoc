@@ -14,6 +14,7 @@
 		2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AD1AA5F557003C46E2 /* Images.xcassets */; };
 		2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AF1AA5F557003C46E2 /* LaunchScreen.xib */; };
 		2CEC22BD1AA5F557003C46E2 /* Gam_InsaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */; };
+		819A16EA1AA5FAD0002DA301 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819A16E91AA5FAD0002DA301 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2CEC22B61AA5F557003C46E2 /* Gam'InsaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gam'InsaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22BB1AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gam_InsaTests.swift; sourceTree = "<group>"; };
+		819A16E91AA5FAD0002DA301 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */,
 				2CEC22A81AA5F557003C46E2 /* ViewController.swift */,
+				819A16E91AA5FAD0002DA301 /* Player.swift */,
 				2CEC22AA1AA5F557003C46E2 /* Main.storyboard */,
 				2CEC22AD1AA5F557003C46E2 /* Images.xcassets */,
 				2CEC22AF1AA5F557003C46E2 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819A16EA1AA5FAD0002DA301 /* Player.swift in Sources */,
 				2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
@@ -409,6 +413,7 @@
 				2CEC22C21AA5F557003C46E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CEC22C31AA5F557003C46E2 /* Build configuration list for PBXNativeTarget "Gam'InsaTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				2CEC22C51AA5F557003C46E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

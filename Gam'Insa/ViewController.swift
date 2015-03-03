@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         case tie
     }
     
-    var game
 
     override func viewDidLoad() {
         super.viewDidLoad()
