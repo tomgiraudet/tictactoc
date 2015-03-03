@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>89337B32-28BC-4DFE-84AB-C7217B69F47D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Gam'Insa</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>94D4D027DFAD5323B1659860EFBB5E8329B2E34A</key>
+		<string>https://github.com/tomgiraudet/tictactoc.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Gam'Insa.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>94D4D027DFAD5323B1659860EFBB5E8329B2E34A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tomgiraudet/tictactoc.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>94D4D027DFAD5323B1659860EFBB5E8329B2E34A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>94D4D027DFAD5323B1659860EFBB5E8329B2E34A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Gam'Insa</string>
+		</dict>
+	</array>
+</dict>
+</plist>

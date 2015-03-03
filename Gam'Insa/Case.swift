@@ -27,7 +27,11 @@ class Case: UIView {
         let x = i*10 //+ heighScreen
         let y = j*10 //+ moitiéCase
         
+<<<<<<< HEAD
         playedImage.frame = CGRect(x: x, y: y, width: 10, height: 10)
+=======
+        playedImage.frame = CGRectMake(245, 5, 30, 30)
+>>>>>>> cfcde1f469ec3c33a235e087194044a8bc6957f3
         
 
     }
