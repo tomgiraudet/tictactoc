@@ -15,14 +15,26 @@ class Case: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    var player : Player
+    var player : Player?
     var activate : Bool = false
     var i : Int = 0
     var j : Int = 0
     
+    override init(){
+        super.init()
+    }
     
-    func placeCase (i: Int, j: Int, player : Player){
-        var playedImage = player.icon
+    func initView (i : Int, j : Int){
+        self.i = i
+        self.j = j
+        self.player = nil
+        self.activate = false
+    }
+    
+    /*
+    func placeCase (player : Player){
+        var playedImage = player.icon.image
+        playedImage.frame = CGRectMake(
         
         let x = i*10 //+ heighScreen
         let y = j*10 //+ moitiéCase
@@ -30,6 +42,6 @@ class Case: UIView {
         playedImage.frame = CGRectMake(245, 5, 30, 30)
         
 
-    }
+    }*/
     
 }
