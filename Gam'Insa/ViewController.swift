@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var currentPlayer:Player!
 
     // Game
-    //var matrice: [[Player]] [[Player], [Player], [Player]]
+    var matrix = Array<Array<Player>>()
     enum stateGame {
         case playing
         case wino
