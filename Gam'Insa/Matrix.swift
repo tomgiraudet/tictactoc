@@ -19,17 +19,79 @@ class Matrix:NSObject{
         self.mat = Array<Array<Player>>()
     }
     
-    // Regarde s'il y a une diagonale qui a gagné
-    //func diagonaleGagnante() -> (Int,String){
-        
-        
-       //     }
     
-    func diagonaleGagante() ->(Int, String){
+    
+    func matricGagnante() -> (Int, String){
+        
+        var winnableTotal: Int = 0
+        var winner: String = ""
+        
+        if (diagonaleGagnante().0 == 1){
+            winnableTotal == 1
+            winner = diagonaleGagnante().1
+            return (winnableTotal,winner)
+        }else{
+            if (ligneGagnante().0 == 1){
+                winnableTotal == 1
+                winner = diagonaleGagnante().1
+                return (winnableTotal,winner)
+            }else{
+                if (colonneGagnante().0 == 1){
+                    winnableTotal == 1
+                    winner = diagonaleGagnante().1
+                    return (winnableTotal,winner)
+                }else{
+                    return (0,"")
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    func diagonaleGagnante() ->(Int, String){
+        var winnable: Int = 1
+        var actualSerie: String
+        
+        // première diagonale
+        if (self.mat[0][0].name == ""){
+            winnable = 0
+           return (winnable,"")
+        }else{
+            actualSerie = self.mat[0][0].name
+            for i in 1...2{
+                if !(self.mat[i][i] == actualSerie){
+                    winnable = 0
+                // La diagonale ne peut plus être valide
+                }
+            }
+            
+            if (winnable == 1){
+                return (winnable,actualSerie)
+                // C'est gagné
+            }else{
+                
+                // seconde diagonale
+                if !(self.mat[0][2].name == ""){
+                    winnable = 1
+                    actualSerie = self.mat[0][2].name
+                    
+                    for i in 1...2{
+                        if !(self.mat[i][2-i].name == actualSerie) {
+                            winnable = 0
+                        }
+                }
+                }
+            }
+        }
+        if winnable == 1{
+            return(winnable, actualSerie)
+        }else{
+            return(winnable, "")
+        }
+    }
 
-
-        return (1,"")
-}
     
     
     func colonneGagnante() ->(Int,String){
@@ -51,7 +113,7 @@ class Matrix:NSObject{
            
         }
         return (0,"")
-    }
+        }
     
     func ligneGagnante() ->(Int,String){
         var winnable: Int = 1
@@ -72,6 +134,6 @@ class Matrix:NSObject{
             
         }
         return (0,"")
-    }
+        }
     
 }
