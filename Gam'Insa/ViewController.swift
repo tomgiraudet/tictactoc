@@ -77,12 +77,10 @@ class ViewController: UIViewController {
                 var x = 15 + CGFloat(i)*((grid.frame.size.width)/6)
                 var y = grid.frame.origin.y - (grid.frame.size.height)/4 + CGFloat(j)*((self.view.frame.size.height)/10) + 10
                 //var y = grid.frame.origin.y + CGFloat(j)*((self.view.frame.size.height)/6)
-                println("\(x),\(y)")
-                
+
                 var width = (grid.frame.size.width)/5
                 var height = (grid.frame.size.height)/5
                 caseToAdd.frame = CGRectMake(x, y, width, height)
-                println("La case \(i),\(j) va être affichée")
                 caseToAdd.placeCase(player1)
                 self.view.addSubview(caseToAdd)
             }
