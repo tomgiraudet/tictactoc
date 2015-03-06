@@ -11,18 +11,15 @@ import UIKit
 
 class Case: UIView {
 
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     var player : Player?
     var activate : Bool = false
     var i : Int = 0
     var j : Int = 0
     
-    override init(){
+   /* override init(){
         super.init()
-    }
+    }*/
     
     func initView (i : Int, j : Int){
         self.i = i
@@ -31,17 +28,16 @@ class Case: UIView {
         self.activate = false
     }
     
-    /*
+    // Affiche l'icone du joueur sur la case qu'il vient de jouer
     func placeCase (player : Player){
-        var playedImage = player.icon.image
-        playedImage.frame = CGRectMake(
+        var playedImage = UIImageView(image: player.icon.image)
         
-        let x = i*10 //+ heighScreen
-        let y = j*10 //+ moitiéCase
-        
-        playedImage.frame = CGRectMake(245, 5, 30, 30)
-        
+        playedImage.frame.size.width = self.frame.size.width
+        playedImage.frame.size.height = self.frame.size.height
+        playedImage.frame.origin.x=self.frame.origin.x
+        playedImage.frame.origin.y=self.frame.origin.y
 
-    }*/
+        self.addSubview(playedImage)
+    }
     
 }

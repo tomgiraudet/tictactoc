@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C24A5C61AA8D7C1005D6B04 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A5C51AA8D7C1005D6B04 /* Matrix.swift */; };
+		2C24A5C81AA8E3BD005D6B04 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A5C71AA8E3BD005D6B04 /* Case.swift */; };
+		2C24A5CA1AA8E3C5005D6B04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24A5C91AA8E3C5005D6B04 /* ViewController.swift */; };
+		2C24A5D01AA8E3D5005D6B04 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C24A5CB1AA8E3D5005D6B04 /* background.png */; };
+		2C24A5D11AA8E3D5005D6B04 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C24A5CC1AA8E3D5005D6B04 /* grid.png */; };
+		2C24A5D21AA8E3D5005D6B04 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C24A5CD1AA8E3D5005D6B04 /* o.png */; };
+		2C24A5D31AA8E3D5005D6B04 /* titre.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C24A5CE1AA8E3D5005D6B04 /* titre.png */; };
+		2C24A5D41AA8E3D5005D6B04 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C24A5CF1AA8E3D5005D6B04 /* x.png */; };
 		2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */; };
 		2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A51AA5F557003C46E2 /* Gam_Insa.xcdatamodeld */; };
-		2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A81AA5F557003C46E2 /* ViewController.swift */; };
 		2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AA1AA5F557003C46E2 /* Main.storyboard */; };
 		2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AD1AA5F557003C46E2 /* Images.xcassets */; };
 		2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC22AF1AA5F557003C46E2 /* LaunchScreen.xib */; };
 		2CEC22BD1AA5F557003C46E2 /* Gam_InsaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */; };
-		2CEC22D71AA64550003C46E2 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22D51AA64550003C46E2 /* Case.swift */; };
 		2CEC22D81AA64550003C46E2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22D61AA64550003C46E2 /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,18 +35,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C24A5C51AA8D7C1005D6B04 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		2C24A5C71AA8E3BD005D6B04 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		2C24A5C91AA8E3C5005D6B04 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C24A5CB1AA8E3D5005D6B04 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		2C24A5CC1AA8E3D5005D6B04 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		2C24A5CD1AA8E3D5005D6B04 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
+		2C24A5CE1AA8E3D5005D6B04 /* titre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titre.png; sourceTree = "<group>"; };
+		2C24A5CF1AA8E3D5005D6B04 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		2CEC229E1AA5F557003C46E2 /* Gam'Insa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gam'Insa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22A21AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEC22A61AA5F557003C46E2 /* Gam_Insa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gam_Insa.xcdatamodel; sourceTree = "<group>"; };
-		2CEC22A81AA5F557003C46E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CEC22AB1AA5F557003C46E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CEC22AD1AA5F557003C46E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CEC22B01AA5F557003C46E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2CEC22B61AA5F557003C46E2 /* Gam'InsaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gam'InsaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22BB1AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22BC1AA5F557003C46E2 /* Gam_InsaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gam_InsaTests.swift; sourceTree = "<group>"; };
-		2CEC22D51AA64550003C46E2 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 		2CEC22D61AA64550003C46E2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +95,11 @@
 		2CEC22A01AA5F557003C46E2 /* Gam'Insa */ = {
 			isa = PBXGroup;
 			children = (
-				2CEC22D51AA64550003C46E2 /* Case.swift */,
+				2C24A5C91AA8E3C5005D6B04 /* ViewController.swift */,
+				2C24A5C71AA8E3BD005D6B04 /* Case.swift */,
 				2CEC22D61AA64550003C46E2 /* Player.swift */,
 				2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */,
-				2CEC22A81AA5F557003C46E2 /* ViewController.swift */,
+				2C24A5C51AA8D7C1005D6B04 /* Matrix.swift */,
 				2CEC22AA1AA5F557003C46E2 /* Main.storyboard */,
 				2CEC22C61AA5FF12003C46E2 /* img */,
 				2CEC22AD1AA5F557003C46E2 /* Images.xcassets */,
@@ -125,6 +138,11 @@
 		2CEC22C61AA5FF12003C46E2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2C24A5CB1AA8E3D5005D6B04 /* background.png */,
+				2C24A5CC1AA8E3D5005D6B04 /* grid.png */,
+				2C24A5CD1AA8E3D5005D6B04 /* o.png */,
+				2C24A5CE1AA8E3D5005D6B04 /* titre.png */,
+				2C24A5CF1AA8E3D5005D6B04 /* x.png */,
 			);
 			path = img;
 			sourceTree = "<group>";
@@ -209,7 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C24A5D41AA8E3D5005D6B04 /* x.png in Resources */,
 				2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */,
+				2C24A5D31AA8E3D5005D6B04 /* titre.png in Resources */,
+				2C24A5D11AA8E3D5005D6B04 /* grid.png in Resources */,
+				2C24A5D01AA8E3D5005D6B04 /* background.png in Resources */,
+				2C24A5D21AA8E3D5005D6B04 /* o.png in Resources */,
 				2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */,
 				2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */,
 			);
@@ -229,9 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */,
-				2CEC22D71AA64550003C46E2 /* Case.swift in Sources */,
+				2C24A5CA1AA8E3C5005D6B04 /* ViewController.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
+				2C24A5C61AA8D7C1005D6B04 /* Matrix.swift in Sources */,
+				2C24A5C81AA8E3BD005D6B04 /* Case.swift in Sources */,
 				2CEC22D81AA64550003C46E2 /* Player.swift in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
 			);
