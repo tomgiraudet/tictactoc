@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var player1:Player!
     var player2:Player!
     var currentPlayer:Player!
+    var matrice:Matrix!
     
     enum stateGame {
         case playing
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     
     let grid = UIImageView(image: UIImage(named: "Grid.png"))
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
+    //var infoPlayer = UILabel()
     
     override func viewDidLoad() {
         
@@ -33,9 +35,9 @@ class ViewController: UIViewController {
         
         //Player
         player1 = Player()
-        player1.createPlayer("Player", img:"x.png")
+        player1.createPlayer("Juliette", img:"x.png")
         player2 = Player()
-        player2.createPlayer("Player", img:"o.png")
+        player2.createPlayer("Tom", img:"o.png")
         currentPlayer = player1
         
         // Placement titre
@@ -48,14 +50,20 @@ class ViewController: UIViewController {
         grid.frame.origin.x = 10
         grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
+        // Placement Label
+        /*infoPlayer.frame = CGRectMake((self.view.frame.size.width - titre.frame.size.height)/2, titre.frame.size.height + 20, self.view.frame.size.width, 80)
+        infoPlayer.text = "Au tour de \(currentPlayer.name) de jouer !"
+*/
         // Initialisation
+        matrice = Matrix()
+        matrice.createMatrix()
         var background = UIImageView(image: UIImage(named: "background.png"))
         background.frame.size.width = self.view.frame.size.width
         background.frame.size.height = self.view.frame.size.height
         self.view.addSubview(background)
-
         self.view.addSubview(titre)
         self.view.addSubview(grid)
+        //self.view.addSubview(infoPlayer)
         initCases()
     }
     
@@ -82,7 +90,10 @@ class ViewController: UIViewController {
         }
     }
     
+    // Fonction appelée lorsqu'une case est touchée
     func caseJouee(_caseJouee : Case) {
+        
+        // Gestion de l'affichage et du current player
         if (_caseJouee.player == nil){
             _caseJouee.setPlayer(_caseJouee.papa!.currentPlayer)
             _caseJouee.placeCase(_caseJouee.papa!.currentPlayer)
@@ -91,7 +102,12 @@ class ViewController: UIViewController {
             }else{
                 _caseJouee.papa!.currentPlayer = _caseJouee.papa!.player1
             }
+            
         }
+            println("Coup du tour : \(_caseJouee.player?.name) en [\(_caseJouee.i), \(_caseJouee.j)]")
+        // Gestion de la matrice
+        matrice.addCase(_caseJouee.i, j: _caseJouee.j, _player: _caseJouee.player!)
+        println("\(matrice.matrixGagnante())")
     }
     
 }

@@ -54,7 +54,6 @@ class Case: UIView {
     
     func touchedCase() {
         self.papa?.caseJouee(self)
-        println("appel ok")
     }
     
     

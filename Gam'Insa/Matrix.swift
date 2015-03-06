@@ -13,12 +13,19 @@ import UIKit
 
 class Matrix:NSObject{
     
-    var mat:Array<Array<Player>>!
+    //var mat:Array<Array<Player>>!
+    var mat: [[Player]]!
+    
     
     func createMatrix(){
-        self.mat = Array<Array<Player>>()
+        mat = Array<Array<Player>>()
     }
     
+    
+    func addCase(i: Int, j: Int, _player: Player){
+        mat[i][j] = _player
+        println("Case ajoutée à la matrice")
+    }
     
     
     func matrixGagnante() -> (Int, String){
