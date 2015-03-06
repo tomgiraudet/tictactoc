@@ -25,6 +25,13 @@ class Matrix:NSObject{
         
        //     }
     
+    func diagonaleGagante() ->(Int, String){
+
+
+        return (1,"")
+}
+    
+    
     func colonneGagnante() ->(Int,String){
         var winnable: Int = 1
         var actualSerie: String

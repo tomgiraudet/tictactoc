@@ -81,6 +81,7 @@ class ViewController: UIViewController {
                 var width = (grid.frame.size.width)/5
                 var height = (grid.frame.size.height)/5
                 caseToAdd.frame = CGRectMake(x, y, width, height)
+
                 caseToAdd.placeCase(player1)
                 self.view.addSubview(caseToAdd)
             }
