@@ -21,7 +21,7 @@ class Matrix:NSObject{
     
     
     
-    func matricGagnante() -> (Int, String){
+    func matrixGagnante() -> (Int, String){
         
         var winnableTotal: Int = 0
         var winner: String = ""

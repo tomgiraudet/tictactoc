@@ -16,28 +16,47 @@ class Case: UIView {
     var activate : Bool = false
     var i : Int = 0
     var j : Int = 0
+    var tapRec = UITapGestureRecognizer()
+    var papa : ViewController?
+    
     
    /* override init(){
         super.init()
     }*/
     
-    func initView (i : Int, j : Int){
+    func initView (i : Int, j : Int, _papa: ViewController){
         self.i = i
         self.j = j
+        self.papa = _papa
         self.player = nil
         self.activate = false
+        tapRec.addTarget(self, action: "touchedCase")        // a vérifier
+        self.addGestureRecognizer(tapRec)
     }
     
     // Affiche l'icone du joueur sur la case qu'il vient de jouer
     func placeCase (player : Player){
-        var playedImage = UIImageView(image: player.icon.image)
+        //self.backgroundColor = .blackColor()
         
-        playedImage.frame.size.width = self.frame.size.width
-        playedImage.frame.size.height = self.frame.size.height
-        playedImage.frame.origin.x=self.frame.origin.x
-        playedImage.frame.origin.y=self.frame.origin.y
+        var playedImage = UIImageView(image:player.icon)
+        playedImage.frame.size.width = self.frame.size.width * (80/100)
+        playedImage.frame.size.height = self.frame.size.height * (80/100)
+        playedImage.frame.origin.x = 16 - CGFloat((self.j))*6
+        playedImage.frame.origin.y = 17 
 
         self.addSubview(playedImage)
+        
     }
+    
+    func setPlayer(_player: Player){
+        self.player = _player
+    }
+    
+    func touchedCase() {
+        self.papa?.caseJouee(self)
+        println("appel ok")
+    }
+    
+    
     
 }

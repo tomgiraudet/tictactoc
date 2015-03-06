@@ -9,14 +9,12 @@
 import UIKit
 
 
-
 class ViewController: UIViewController {
 
-    
     var player1:Player!
     var player2:Player!
     var currentPlayer:Player!
-    //var matrix = Array<Array<Player>>()
+    
     enum stateGame {
         case playing
         case wino
@@ -24,7 +22,7 @@ class ViewController: UIViewController {
         case tie
     }
     
-    let grid = UIImageView(image: UIImage(named: "grid.png"))
+    let grid = UIImageView(image: UIImage(named: "Grid.png"))
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
     
     override func viewDidLoad() {
@@ -71,20 +69,29 @@ class ViewController: UIViewController {
         for i in 0...2 {
             for j in 0...2 {
                 var caseToAdd = Case()
-                caseToAdd.initView(i,j: j)
+                caseToAdd.initView(i,j: j, _papa: self)
+                caseToAdd.frame.size.width = (grid.frame.size.width/3)-2
+                caseToAdd.frame.size.height = (grid.frame.size.height/3)-2
+                caseToAdd.frame.origin.y = grid.frame.origin.y + (CGFloat(i)*(caseToAdd.frame.height))
+                caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
                 
-                // Manoucherie
-                var x = 15 + CGFloat(i)*((grid.frame.size.width)/6)
-                var y = grid.frame.origin.y - (grid.frame.size.height)/4 + CGFloat(j)*((self.view.frame.size.height)/10) + 10
-                //var y = grid.frame.origin.y + CGFloat(j)*((self.view.frame.size.height)/6)
 
-                var width = (grid.frame.size.width)/5
-                var height = (grid.frame.size.height)/5
-                caseToAdd.frame = CGRectMake(x, y, width, height)
-
-                caseToAdd.placeCase(player1)
+                //caseToAdd.placeCase(currentPlayer)
                 self.view.addSubview(caseToAdd)
             }
         }
     }
+    
+    func caseJouee(_caseJouee : Case) {
+        if (_caseJouee.player == nil){
+            _caseJouee.setPlayer(_caseJouee.papa!.currentPlayer)
+            _caseJouee.placeCase(_caseJouee.papa!.currentPlayer)
+            if (_caseJouee.papa!.currentPlayer == _caseJouee.papa!.player1){
+                _caseJouee.papa!.currentPlayer = _caseJouee.papa!.player2
+            }else{
+                _caseJouee.papa!.currentPlayer = _caseJouee.papa!.player1
+            }
+        }
+    }
+    
 }

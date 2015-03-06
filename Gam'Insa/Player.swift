@@ -14,11 +14,11 @@ import UIKit
 class Player:NSObject{
 
     var name:String!
-    var icon:UIImageView!
+    var icon:UIImage!
     
     func createPlayer (name:String, img:String){
         self.name = name
-        self.icon = UIImageView(image: UIImage(named: img))
+        self.icon = UIImage(named: img)
     }
     
 }
