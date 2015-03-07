@@ -36,10 +36,12 @@ class Matrix:NSObject{
         }
     }
     
+    // Détermine état du jeu (0: en cours, 1: gagné, 2:tie)
     func matrixGagnante() -> (Int, String){
         
         var winnableTotal: Int = 0
         var winner: String
+        var tie = 0
         
         println("début matrixGagnante")
         
@@ -68,7 +70,14 @@ class Matrix:NSObject{
                         return (winnableTotal,winner)
                     }else{
                         //println("elseTotal")
-                        return (0,"")
+                        for i in 0...2 {
+                            for j in 0...2{
+                                if (mat[i][j].name==nil){
+                                    return (0,"")
+                                }
+                            }
+                        }
+                        return (2,"")
                     }
                 }
             }
@@ -132,7 +141,7 @@ class Matrix:NSObject{
                 }
                 if (winnable == 1) {
                     return (winnable, player)
-                    println("Colonne gagnante")
+
                 }
             }
             

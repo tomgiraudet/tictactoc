@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         
         //Players
         player1 = Player()
-        player1.createPlayer("Juliette", img:"x.png")
+        player1.createPlayer("Juliette", img:"X_black.png")
         player2 = Player()
-        player2.createPlayer("Tom", img:"o.png")
+        player2.createPlayer("Tom", img:"O_black.png")
         currentPlayer = player1
         
         // Entete
@@ -137,17 +137,28 @@ class ViewController: UIViewController {
             case player2.name: score2++
             default: println("C'est dieu qui a gagné")
             }
-            popUp(matrice.matrixGagnante().1)
+            popUpWin(matrice.matrixGagnante().1)
+            resetCases()      //J'ai enlevé ton matrix.createMatrix puisque dans le viewDidLoad c'est fait
+        }
+        if matrice.matrixGagnante().0 == 2 {
+            popUpTie()
             resetCases()
-            matrice.createMatrix()
         }
     }
     
-    func popUp(_playerName: String) {
+    func popUpWin(_playerName: String) {
         let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
             "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func popUpTie() {
+        let alertController = UIAlertController(title: "Match nul!", message:
+            "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
     
 }
