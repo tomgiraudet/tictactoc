@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     var player1:Player!
     var player2:Player!
+    var score1: Int = 0
+    var score2: Int = 0
     var currentPlayer:Player!
     var matrice:Matrix!
     
@@ -83,12 +85,15 @@ class ViewController: UIViewController {
                 caseToAdd.frame.size.height = (grid.frame.size.height/3)-2
                 caseToAdd.frame.origin.y = grid.frame.origin.y + (CGFloat(i)*(caseToAdd.frame.height))
                 caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
-                
-
-                //caseToAdd.placeCase(currentPlayer)
                 self.view.addSubview(caseToAdd)
+                
             }
         }
+    }
+    
+    func resetCases(){
+        viewDidLoad()
+        println("Okkkkkk")
     }
     
     // Fonction appelée lorsqu'une case est touchée
@@ -110,6 +115,23 @@ class ViewController: UIViewController {
         // Gestion de la matrice
         matrice.addCase(_caseJouee.i, j: _caseJouee.j, _player: _caseJouee.player!)
         println("\(matrice.matrixGagnante())")
+        if matrice.matrixGagnante().0 == 1 {
+            switch matrice.matrixGagnante().1{
+            case player1.name: score1++
+            case player2.name: score2++
+            default: println("C'est dieu qui a gagné")
+            }
+            popUp(matrice.matrixGagnante().1)
+            resetCases()
+            matrice.createMatrix()
+        }
+    }
+    
+    func popUp(_playerName: String) {
+        let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
+            "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
 }

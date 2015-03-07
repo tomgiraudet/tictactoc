@@ -15,14 +15,13 @@ class Matrix:NSObject{
     
     var papa : ViewController?
     var mat:Array<Array<Player>>!
-    //var mat: [[Player]]!
-    
     
     func createMatrix(){
         var column : Int
         mat = Array<Array<Player>>()
         for column in 0...2 {
-            mat.append(Array(count:3, repeatedValue:Player()))
+            var _player = Player()
+            mat.append(Array(count:3, repeatedValue:_player))
         }
     }
     
@@ -37,11 +36,10 @@ class Matrix:NSObject{
         }
     }
     
-    
     func matrixGagnante() -> (Int, String){
         
         var winnableTotal: Int = 0
-        var winner: String = ""
+        var winner: String
         
         println("début matrixGagnante")
         
@@ -69,7 +67,7 @@ class Matrix:NSObject{
                         println("colonneTotal")
                         return (winnableTotal,winner)
                     }else{
-                        println("elseTotal")
+                        //println("elseTotal")
                         return (0,"")
                     }
                 }
@@ -77,12 +75,12 @@ class Matrix:NSObject{
         }
     }
     
-    // Marche
+    
     func diagonaleGagnanteDroite() ->(Int, String){
         var winnable: Int = 1
         var player: String
         
-        if(!(self.mat[0][0].name == nil)){
+        if !(self.mat[0][0].name == nil) {
                 player = self.mat[0][0].name
                 for i in 1...2 {
                     if(self.mat[i][i].name != player){
@@ -97,7 +95,7 @@ class Matrix:NSObject{
         return (0, "")
     }
     
-    //Marche
+    
     func diagonaleGagnanteGauche() ->(Int, String){
         var winnable: Int = 1
         var player: String
@@ -117,12 +115,13 @@ class Matrix:NSObject{
         return (0, "")
     }
     
-    //Marche pour la première colonne mais pas les autres (2e marche des fois)
+    
     func colonneGagnante() ->(Int,String) {
         var winnable: Int = 1
         var player: String
         
         for j in 0...2 {
+            winnable = 1 // si tu ne le remets pas à 1 à chaque début de ligne, les lignes 1 et 2 ne pourront jamais gagner
             if(self.mat[0][j].name != nil){
                 player = self.mat[0][j].name
                 for i in 1...2{
@@ -133,6 +132,7 @@ class Matrix:NSObject{
                 }
                 if (winnable == 1) {
                     return (winnable, player)
+                    println("Colonne gagnante")
                 }
             }
             
@@ -141,97 +141,29 @@ class Matrix:NSObject{
     }
     
     
-    
-    
-    
-/*    func diagonaleGagnante() ->(Int, String){
+    func ligneGagnante() ->(Int,String) {
         var winnable: Int = 1
-        var actualSerie: String
+        var player: String
         
-         println("diagonale")
-        
-        // première diagonale
-        if (self.mat[0][0].name == nil){
-            winnable = 0
-           return (winnable,"")
-        }else{
-            actualSerie = self.mat[0][0].name
-            for i in 1...2{
-                if !(self.mat[i][i] == actualSerie){
-                    winnable = 0
-                    println("ok")
-                // La diagonale ne peut plus être valide
+        for j in 0...2 {
+            winnable = 1 // si tu ne le remets pas à 1 à chaque début de ligne, les lignes 1 et 2 ne pourront jamais gagner
+            if(self.mat[j][0].name != nil){
+                player = self.mat[j][0].name
+                for i in 1...2{
+                    if(self.mat[j][i].name != player){
+                        winnable = 0
+                        player = ""
+                    }
+                }
+                if (winnable == 1) {
+                    return (winnable, player)
+                    println("ligne gagnante")
                 }
             }
             
-            if (winnable == 1){
-                return (winnable,actualSerie)
-                // C'est gagné
-            }else{
-                
-                // seconde diagonale
-                if !(self.mat[0][2].name == nil){
-                    winnable = 1
-                    actualSerie = self.mat[0][2].name
-                    
-                    for i in 1...2{
-                        if !(self.mat[i][2-i].name == actualSerie) {
-                            winnable = 0
-                        }
-                    }
-                }
-            }
         }
-        if winnable == 1{
-            return(winnable, actualSerie)
-        }else{
-            return(winnable, "")
-        }
+        return (0, "")
     }
-*/
     
-    
-/*    func colonneGagnante() ->(Int,String){
-        var winnable: Int = 1
-        var actualSerie: String
-        for i in 0...2 {
-            if !(self.mat[i][0].name == nil) {
-                actualSerie = self.mat[i][0].name
-                for j in 1...2 {
-                    if self.mat[i][j] != actualSerie {
-                        winnable = 0
-                    }
-                }
-                if winnable == 1{
-                    println("C'est gagné !")
-                    return (1,actualSerie)
-                }
-            }
-           
-        }
-        return (0,"")
-        }
-*/
-    
-    func ligneGagnante() ->(Int,String){
-        var winnable: Int = 1
-        var actualSerie: String
-        for i in 0...2 {
-            if !(self.mat[0][i].name == nil) {
-                actualSerie = self.mat[0][i].name
-                for j in 1...2 {
-                    if self.mat[j][i] != actualSerie {
-                        winnable = 0
-                    }
-                }
-                if winnable == 1{
-                    println("C'est gagné !")
-                    return (1,actualSerie)
-                }
-            }
-            
-        }
-        return (0,"")
-        }
     
 }

@@ -15,10 +15,12 @@ class Player:NSObject{
 
     var name:String!
     var icon:UIImage!
+    var score:Int!
     
     func createPlayer (name:String, img:String){
         self.name = name
         self.icon = UIImage(named: img)
+        self.score = 0
     }
     
 }
