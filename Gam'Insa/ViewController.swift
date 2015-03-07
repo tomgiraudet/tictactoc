@@ -10,6 +10,8 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    var parent : ModeView!
 
     var player1:Player!
     var player2:Player!
@@ -46,7 +48,7 @@ class ViewController: UIViewController {
         player2.createPlayer("Tom", img:"O_black.png")
         currentPlayer = player1
         
-        // Entete
+        // Titre
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
         
@@ -57,7 +59,7 @@ class ViewController: UIViewController {
         grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
         // GameInfo
-        gameInfo.frame = CGRectMake(10, titre.frame.size.height+40, self.view.frame.width-20, 50)
+        gameInfo.frame = CGRectMake(10, titre.frame.size.height+30, self.view.frame.width-20, 50)
         gameInfo.text = "\(player1.name) - \(score1) vs \(score2) - \(player2.name)"
         gameInfo.textAlignment = .Center
         gameInfo.textColor = UIColor.blackColor()
@@ -73,11 +75,13 @@ class ViewController: UIViewController {
         resetButtonTapRec.addTarget(self, action: "resetCases")
         resetButton.addGestureRecognizer(resetButtonTapRec)
         
+        //Background
+        background.frame.size.width = self.view.frame.size.width
+        background.frame.size.height = self.view.frame.size.height
+        
         // Initialisation
         matrice = Matrix()
         matrice.createMatrix()
-        background.frame.size.width = self.view.frame.size.width
-        background.frame.size.height = self.view.frame.size.height
         self.view.addSubview(background)
         self.view.addSubview(titre)
         self.view.addSubview(grid)

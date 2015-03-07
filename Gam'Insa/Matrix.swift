@@ -43,30 +43,24 @@ class Matrix:NSObject{
         var winner: String
         var tie = 0
         
-        println("début matrixGagnante")
-        
         if (diagonaleGagnanteDroite().0 == 1){
             winnableTotal = 1
             winner = diagonaleGagnanteDroite().1
-            println("diagonaleDroiteTotal")
             return (winnableTotal,winner)
         }else{
             if (diagonaleGagnanteGauche().0 == 1){
                 winnableTotal = 1
                 winner = diagonaleGagnanteGauche().1
-                println("diagonaleGaucheTotal")
                 return (winnableTotal,winner)
             }else{
                 if (ligneGagnante().0 == 1){
                     winnableTotal = 1
                     winner = ligneGagnante().1
-                    println("ligneTotal")
                     return (winnableTotal,winner)
                 }else{
                     if (colonneGagnante().0 == 1){
                         winnableTotal = 1
                         winner = colonneGagnante().1
-                        println("colonneTotal")
                         return (winnableTotal,winner)
                     }else{
                         //println("elseTotal")
@@ -98,7 +92,6 @@ class Matrix:NSObject{
                         return (winnable, player)
                     }
             }
-            println("diagonale gagnée")
             return (winnable, player)
         }
         return (0, "")
@@ -118,7 +111,6 @@ class Matrix:NSObject{
                     return (winnable, player)
                 }
             }
-            println("diagonale gagnée")
             return (winnable, player)
         }
         return (0, "")
@@ -130,7 +122,7 @@ class Matrix:NSObject{
         var player: String
         
         for j in 0...2 {
-            winnable = 1 // si tu ne le remets pas à 1 à chaque début de ligne, les lignes 1 et 2 ne pourront jamais gagner
+            winnable = 1
             if(self.mat[0][j].name != nil){
                 player = self.mat[0][j].name
                 for i in 1...2{
@@ -155,7 +147,7 @@ class Matrix:NSObject{
         var player: String
         
         for j in 0...2 {
-            winnable = 1 // si tu ne le remets pas à 1 à chaque début de ligne, les lignes 1 et 2 ne pourront jamais gagner
+            winnable = 1
             if(self.mat[j][0].name != nil){
                 player = self.mat[j][0].name
                 for i in 1...2{
@@ -166,7 +158,6 @@ class Matrix:NSObject{
                 }
                 if (winnable == 1) {
                     return (winnable, player)
-                    println("ligne gagnante")
                 }
             }
             
