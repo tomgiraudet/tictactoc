@@ -27,7 +27,11 @@ class ViewController: UIViewController {
     
     let grid = UIImageView(image: UIImage(named: "Grid.png"))
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
-    //var infoPlayer = UILabel()
+    let gameInfo = UILabel()
+    let background = UIImageView(image: UIImage(named: "background.png"))
+    let settingsButton = UIImageView(image: UIImage(named: "settings.png"))
+    let resetButton = UIImageView(image: UIImage(named: "reset.png"))
+    
     
     override func viewDidLoad() {
         
@@ -35,38 +39,51 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         
-        //Player
+        //Players
         player1 = Player()
         player1.createPlayer("Juliette", img:"x.png")
         player2 = Player()
         player2.createPlayer("Tom", img:"o.png")
         currentPlayer = player1
         
-        // Placement titre
+        // Entete
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
         
-        // Placement grille
+        // Grille
         grid.frame.size.width = self.view.frame.size.width-20
         grid.frame.size.height = self.view.frame.size.width * (704/659)
         grid.frame.origin.x = 10
         grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
-        // Placement Label
-        /*infoPlayer.frame = CGRectMake((self.view.frame.size.width - titre.frame.size.height)/2, titre.frame.size.height + 20, self.view.frame.size.width, 80)
-        infoPlayer.text = "Au tour de \(currentPlayer.name) de jouer !"
-        */
+        // GameInfo
+        gameInfo.frame = CGRectMake(10, titre.frame.size.height+40, self.view.frame.width-20, 50)
+        gameInfo.text = "\(player1.name) - \(score1) vs \(score2) - \(player2.name)"
+        gameInfo.textAlignment = .Center
+        gameInfo.textColor = UIColor.blackColor()
+        
+        // TopButton
+        var settingsButtonTapRec = UITapGestureRecognizer()
+        var resetButtonTapRec = UITapGestureRecognizer()
+        settingsButton.frame = CGRectMake(10,20,37, 37)
+        //settingsButtonTapRec.addTarget(settingsButton, action: "settings")
+        settingsButton.addGestureRecognizer(settingsButtonTapRec)
+        
+        resetButton.frame = CGRectMake(self.view.frame.size.width-50, 20, 40, 35)
+        resetButtonTapRec.addTarget(self, action: "resetCases")
+        resetButton.addGestureRecognizer(resetButtonTapRec)
         
         // Initialisation
         matrice = Matrix()
         matrice.createMatrix()
-        var background = UIImageView(image: UIImage(named: "background.png"))
         background.frame.size.width = self.view.frame.size.width
         background.frame.size.height = self.view.frame.size.height
         self.view.addSubview(background)
         self.view.addSubview(titre)
         self.view.addSubview(grid)
-        //self.view.addSubview(infoPlayer)
+        self.view.addSubview(gameInfo)
+        self.view.addSubview(settingsButton)
+        self.view.addSubview(resetButton)
         initCases()
     }
     
@@ -93,7 +110,6 @@ class ViewController: UIViewController {
     
     func resetCases(){
         viewDidLoad()
-        println("Okkkkkk")
     }
     
     // Fonction appelée lorsqu'une case est touchée

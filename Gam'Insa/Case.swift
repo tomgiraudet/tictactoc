@@ -30,7 +30,7 @@ class Case: UIView {
         self.papa = _papa
         self.player = nil
         self.activate = false
-        tapRec.addTarget(self, action: "touchedCase")        // a vérifier
+        tapRec.addTarget(self, action: "touchedCase")
         self.addGestureRecognizer(tapRec)
     }
     

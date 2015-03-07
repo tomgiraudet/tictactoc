@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5B63D41AAB426C00CE463D /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D21AAB426C00CE463D /* reset.png */; };
+		2C5B63D51AAB426C00CE463D /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D31AAB426C00CE463D /* settings.png */; };
 		2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */; };
 		2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A51AA5F557003C46E2 /* Gam_Insa.xcdatamodeld */; };
 		2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A81AA5F557003C46E2 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C5B63D21AAB426C00CE463D /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
+		2C5B63D31AAB426C00CE463D /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		2CEC229E1AA5F557003C46E2 /* Gam'Insa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gam'Insa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22A21AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		2CEC22C61AA5FF12003C46E2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2C5B63D21AAB426C00CE463D /* reset.png */,
+				2C5B63D31AAB426C00CE463D /* settings.png */,
 				813698551AA9DE1B003CEC61 /* Grid.png */,
 				811E74541AA8D44D0056DC43 /* o@2x.png */,
 				811E74551AA8D44D0056DC43 /* x@2x.png */,
@@ -228,10 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				811E74571AA8D44D0056DC43 /* x@2x.png in Resources */,
+				2C5B63D41AAB426C00CE463D /* reset.png in Resources */,
 				813698561AA9DE1B003CEC61 /* Grid.png in Resources */,
 				811E74531AA8D27A0056DC43 /* background.png in Resources */,
 				2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */,
 				811E74561AA8D44D0056DC43 /* o@2x.png in Resources */,
+				2C5B63D51AAB426C00CE463D /* settings.png in Resources */,
 				2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */,
 				811E74511AA8D0290056DC43 /* Titre.png in Resources */,
 				2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */,
