@@ -28,7 +28,17 @@ class ModeView: UIViewController {
     
     override func viewDidLoad() {
         
-        var ratio = ((self.view.frame.size.width)/(self.view.frame.size.height))
+        var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
+        var soloHeight = (soloImage.frame.size.height)*(38/100)
+        var soloWidth = (soloImage.frame.size.width)*(30/100)
+        var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - (soloImage.frame.size.height)*(38/100) - (duoImage.frame.size.height)*(38/100) - (multiImage.frame.size.height)*(35/100))
+        space = space / 5
+        
+        var x = (self.view.frame.size.width-imageWidth)/2
+        var y = titre.frame.origin.y + titre.frame.size.height + space
+
+        
+        
         
         //Titre
         titre.sizeToFit()
