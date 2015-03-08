@@ -55,7 +55,7 @@ class ModeView: UIViewController {
         
         duoMode.frame=CGRectMake( (self.view.frame.size.width)/2 - ((duoImage.frame.size.width)*(35/100)/2), modeInfo.frame.origin.y +  modeInfo.frame.size.height + soloMode.frame.size.height + 20 + 10, (duoImage.frame.size.width)*(35/100),(duoImage.frame.size.height)*(38/100))
         duoMode.setImage(UIImage (named: "duo.png"), forState: .Normal)
-        duoMode.addTarget(self, action: "goSoloMode", forControlEvents: .TouchUpInside)
+        duoMode.addTarget(self, action: "goDuoMode", forControlEvents: .TouchUpInside)
         
         //MultiIcon
         multiMode.sizeToFit()
@@ -79,10 +79,10 @@ class ModeView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let addItemAlertViewTag = 0
-    let addItemTextAlertViewTag = 1
+    //let addItemAlertViewTag = 0
+    //let addItemTextAlertViewTag = 1
     
-    func goSoloMode() {
+    func goDuoMode() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloID") as ViewController
         vc.parent = self
