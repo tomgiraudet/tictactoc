@@ -27,6 +27,8 @@ class SettingsView: ViewController {
     
     override func viewDidLoad() {
         
+        var ratio = ((self.view.frame.size.height)/(self.view.frame.size.width))
+        
         //Titre
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)

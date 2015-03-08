@@ -28,6 +28,8 @@ class ModeView: UIViewController {
     
     override func viewDidLoad() {
         
+        var ratio = ((self.view.frame.size.width)/(self.view.frame.size.height))
+        
         //Titre
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
@@ -47,13 +49,13 @@ class ModeView: UIViewController {
         
         soloMode.frame=CGRectMake( (self.view.frame.size.width)/2 - ((soloImage.frame.size.width)*(30/100)/2), modeInfo.frame.origin.y +  modeInfo.frame.size.height + 20,(soloImage.frame.size.width)*(30/100),(soloImage.frame.size.height)*(38/100))
         soloMode.setImage(UIImage (named: "solo.png"), forState: .Normal)
-        soloMode.addTarget(self, action: "goSoloMode", forControlEvents: .TouchUpInside)
         
         //DuoIcon
         duoMode.sizeToFit()
         
         duoMode.frame=CGRectMake( (self.view.frame.size.width)/2 - ((duoImage.frame.size.width)*(35/100)/2), modeInfo.frame.origin.y +  modeInfo.frame.size.height + soloMode.frame.size.height + 20 + 10, (duoImage.frame.size.width)*(35/100),(duoImage.frame.size.height)*(38/100))
         duoMode.setImage(UIImage (named: "duo.png"), forState: .Normal)
+        duoMode.addTarget(self, action: "goSoloMode", forControlEvents: .TouchUpInside)
         
         //MultiIcon
         multiMode.sizeToFit()
