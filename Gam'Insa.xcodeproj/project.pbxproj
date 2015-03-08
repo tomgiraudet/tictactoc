@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2C5B63D41AAB426C00CE463D /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D21AAB426C00CE463D /* reset.png */; };
 		2C5B63D51AAB426C00CE463D /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D31AAB426C00CE463D /* settings.png */; };
+		2C5B63D71AAC961D00CE463D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B63D61AAC961D00CE463D /* SettingsView.swift */; };
+		2C5B63DB1AAC9C7600CE463D /* SettingsCreerPartie.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D81AAC9C7600CE463D /* SettingsCreerPartie.png */; };
+		2C5B63DC1AAC9C7600CE463D /* SettingsModeDuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63D91AAC9C7600CE463D /* SettingsModeDuo.png */; };
+		2C5B63DD1AAC9C7600CE463D /* SettingsProfil.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63DA1AAC9C7600CE463D /* SettingsProfil.png */; };
+		2C5B63DF1AACA28600CE463D /* SettingsDuoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */; };
+		2C5B63E11AACA31E00CE463D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63E01AACA31E00CE463D /* back.png */; };
+		2C5B63E31AACA49C00CE463D /* SettingsQuitterPartie.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */; };
 		2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */; };
 		2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A51AA5F557003C46E2 /* Gam_Insa.xcdatamodeld */; };
 		2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A81AA5F557003C46E2 /* ViewController.swift */; };
@@ -45,6 +52,13 @@
 /* Begin PBXFileReference section */
 		2C5B63D21AAB426C00CE463D /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
 		2C5B63D31AAB426C00CE463D /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		2C5B63D61AAC961D00CE463D /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2C5B63D81AAC9C7600CE463D /* SettingsCreerPartie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsCreerPartie.png; sourceTree = "<group>"; };
+		2C5B63D91AAC9C7600CE463D /* SettingsModeDuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsModeDuo.png; sourceTree = "<group>"; };
+		2C5B63DA1AAC9C7600CE463D /* SettingsProfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsProfil.png; sourceTree = "<group>"; };
+		2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDuoView.swift; sourceTree = "<group>"; };
+		2C5B63E01AACA31E00CE463D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsQuitterPartie.png; sourceTree = "<group>"; };
 		2CEC229E1AA5F557003C46E2 /* Gam'Insa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gam'Insa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22A21AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +131,8 @@
 				2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */,
 				2CEC22A81AA5F557003C46E2 /* ViewController.swift */,
 				81B7EEB91AAB9BCC008611DA /* ModeView.swift */,
+				2C5B63D61AAC961D00CE463D /* SettingsView.swift */,
+				2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */,
 				2CEC22AA1AA5F557003C46E2 /* Main.storyboard */,
 				2CEC22C61AA5FF12003C46E2 /* img */,
 				2CEC22AD1AA5F557003C46E2 /* Images.xcassets */,
@@ -155,6 +171,11 @@
 		2CEC22C61AA5FF12003C46E2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */,
+				2C5B63E01AACA31E00CE463D /* back.png */,
+				2C5B63D81AAC9C7600CE463D /* SettingsCreerPartie.png */,
+				2C5B63D91AAC9C7600CE463D /* SettingsModeDuo.png */,
+				2C5B63DA1AAC9C7600CE463D /* SettingsProfil.png */,
 				81B7EEBB1AAB9D69008611DA /* duo.png */,
 				81B7EEBC1AAB9D69008611DA /* multijoueur.png */,
 				81B7EEBD1AAB9D69008611DA /* solo.png */,
@@ -252,17 +273,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5B63D41AAB426C00CE463D /* reset.png in Resources */,
+				2C5B63DB1AAC9C7600CE463D /* SettingsCreerPartie.png in Resources */,
 				813698561AA9DE1B003CEC61 /* Grid.png in Resources */,
+				2C5B63DC1AAC9C7600CE463D /* SettingsModeDuo.png in Resources */,
 				811E74531AA8D27A0056DC43 /* background.png in Resources */,
 				2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */,
 				81B7EEB31AAB94E0008611DA /* O_black.png in Resources */,
 				81B7EEB41AAB94E0008611DA /* O_white.png in Resources */,
+				2C5B63E31AACA49C00CE463D /* SettingsQuitterPartie.png in Resources */,
 				81B7EEB61AAB94E0008611DA /* X_white.png in Resources */,
 				81B7EEB51AAB94E0008611DA /* X_black.png in Resources */,
 				2C5B63D51AAB426C00CE463D /* settings.png in Resources */,
 				2CEC22B11AA5F557003C46E2 /* LaunchScreen.xib in Resources */,
+				2C5B63E11AACA31E00CE463D /* back.png in Resources */,
 				811E74511AA8D0290056DC43 /* Titre.png in Resources */,
 				81B7EEC01AAB9D69008611DA /* solo.png in Resources */,
+				2C5B63DD1AAC9C7600CE463D /* SettingsProfil.png in Resources */,
 				81B7EEBF1AAB9D69008611DA /* multijoueur.png in Resources */,
 				2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */,
 				81B7EEBE1AAB9D69008611DA /* duo.png in Resources */,
@@ -284,11 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEC22A91AA5F557003C46E2 /* ViewController.swift in Sources */,
+				2C5B63D71AAC961D00CE463D /* SettingsView.swift in Sources */,
 				2CEC22D71AA64550003C46E2 /* Case.swift in Sources */,
 				811E74591AA8E2D60056DC43 /* Matrix.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
 				2CEC22D81AA64550003C46E2 /* Player.swift in Sources */,
 				81B7EEBA1AAB9BCC008611DA /* ModeView.swift in Sources */,
+				2C5B63DF1AACA28600CE463D /* SettingsDuoView.swift in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

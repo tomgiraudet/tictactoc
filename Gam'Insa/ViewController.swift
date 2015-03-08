@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var parent : ModeView!
+    var settingsParent : SettingsView!
 
     var player1:Player!
     var player2:Player!
@@ -31,8 +32,12 @@ class ViewController: UIViewController {
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
     let gameInfo = UILabel()
     let background = UIImageView(image: UIImage(named: "background.png"))
-    let settingsButton = UIImageView(image: UIImage(named: "settings.png"))
-    let resetButton = UIImageView(image: UIImage(named: "reset.png"))
+    
+    let settingsButton = UIButton()
+    let resetButton = UIButton()
+    
+    let settingsButtonImg = UIImage(named: "settings.png")
+    let resetButtonImg = UIImage(named: "reset.png")
     
     
     override func viewDidLoad() {
@@ -65,15 +70,13 @@ class ViewController: UIViewController {
         gameInfo.textColor = UIColor.blackColor()
         
         // TopButton
-        var settingsButtonTapRec = UITapGestureRecognizer()
-        var resetButtonTapRec = UITapGestureRecognizer()
-        settingsButton.frame = CGRectMake(10,20,37, 37)
-        //settingsButtonTapRec.addTarget(settingsButton, action: "settings")
-        settingsButton.addGestureRecognizer(settingsButtonTapRec)
+        settingsButton.frame = CGRectMake (5, 20, 25, 25)
+        settingsButton.setImage(settingsButtonImg, forState: .Normal)
+        settingsButton.addTarget(self, action: "settings", forControlEvents: .TouchUpInside)
         
-        resetButton.frame = CGRectMake(self.view.frame.size.width-50, 20, 40, 35)
-        resetButtonTapRec.addTarget(self, action: "resetCases")
-        resetButton.addGestureRecognizer(resetButtonTapRec)
+        resetButton.frame = CGRectMake (self.view.frame.size.width - 30, 20, 25, 23)
+        resetButton.setImage(resetButtonImg, forState: .Normal)
+        resetButton.addTarget(self, action: "reset", forControlEvents: .TouchUpInside)
         
         //Background
         background.frame.size.width = self.view.frame.size.width
@@ -112,8 +115,15 @@ class ViewController: UIViewController {
         }
     }
     
-    func resetCases(){
+    func reset(){
         viewDidLoad()
+    }
+    
+    func settings(){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("soloSettings") as SettingsView
+        vc.runningGame = self
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     // Fonction appelée lorsqu'une case est touchée
@@ -142,11 +152,11 @@ class ViewController: UIViewController {
             default: println("C'est dieu qui a gagné")
             }
             popUpWin(matrice.matrixGagnante().1)
-            resetCases()      //J'ai enlevé ton matrix.createMatrix puisque dans le viewDidLoad c'est fait
+            reset()      //J'ai enlevé ton matrix.createMatrix puisque dans le viewDidLoad c'est fait
         }
         if matrice.matrixGagnante().0 == 2 {
             popUpTie()
-            resetCases()
+            reset()
         }
     }
     

@@ -38,7 +38,7 @@ class ModeView: UIViewController {
         
         // ModeInfo
         modeInfo.frame = CGRectMake(10, titre.frame.size.height+40, self.view.frame.width-20, 50)
-        modeInfo.text = "Choisis ton mode de jeu!"
+        modeInfo.text = "Choisis ton mode de jeu !"
         modeInfo.textAlignment = .Center
         modeInfo.textColor = UIColor.blackColor()
         
