@@ -121,6 +121,7 @@ class TicTacToc: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("soloSettings") as SettingsView
         vc.runningGame = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
     }
     

@@ -89,6 +89,7 @@ class SettingsView: ModeView {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.settingsParent = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
@@ -96,6 +97,7 @@ class SettingsView: ModeView {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("ModeID") as ModeView
         vc.parent = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
     }
 

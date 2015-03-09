@@ -93,6 +93,7 @@ class ModeView: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloLevelID") as SoloModeLevelSelection
         vc.parent = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
@@ -100,6 +101,7 @@ class ModeView: UIViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.parent = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
         
     }
