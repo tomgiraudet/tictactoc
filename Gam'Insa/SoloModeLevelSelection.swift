@@ -85,6 +85,7 @@ class SoloModeLevelSelection: UIViewController{
     func back(){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("ModeID") as ModeView
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
