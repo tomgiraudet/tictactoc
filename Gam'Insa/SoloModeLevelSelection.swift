@@ -48,15 +48,8 @@ class SoloModeLevelSelection: UIViewController{
         slider.maximumValue = 3
         slider.minimumValue = 1
         slider.sizeToFit()
-        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height, slider.frame.size.width, slider.frame.size.height)
-        
-        // LevelLabel
-        var level = Int(slider.value)
-        level = 1
-        levelLabel.text = "\(level)"
-        levelLabel.frame = CGRectMake ((self.view.frame.size.width - levelLabel.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + slider.frame.size.height, levelLabel.frame.size.width, levelLabel.frame.size.height)
-        levelLabel.textColor = .blackColor()
-        
+        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 100, slider.frame.size.width, slider.frame.size.height)
+        slider.addTarget(self, action: "sliderValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         
         //Initialisation
         self.view.addSubview(background)
@@ -71,10 +64,17 @@ class SoloModeLevelSelection: UIViewController{
     
     func sliderValueChanged(sender: UISlider) {
         var level = Int(slider.value)
-        levelLabel.text = "\(level)"
-        levelLabel.frame = CGRectMake ((self.view.frame.size.width - levelLabel.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + slider.frame.size.height, levelLabel.frame.size.width, levelLabel.frame.size.height)
-        levelLabel.textColor = .blackColor()
+        levelLabel.sizeToFit()
+        levelLabel.frame.size.width = self.view.frame.size.width * (50/100)
+        levelLabel.frame.size.height = self.view.frame.size.height * (40/100)
         
+        levelLabel.text = "\(level)"
+        levelLabel.frame = CGRectMake ((self.view.frame.size.width - levelLabel.frame.size.width)/2, titre.frame.origin.y + 30, levelLabel.frame.size.width, levelLabel.frame.size.height)
+        levelLabel.textAlignment = .Center
+        levelLabel.textColor = .blackColor()
+        levelLabel.font = UIFont(name: levelLabel.font.fontName, size: 90)
+        
+
     }
     
     override func didReceiveMemoryWarning() {

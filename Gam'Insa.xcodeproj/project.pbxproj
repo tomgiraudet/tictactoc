@@ -19,6 +19,15 @@
 		2C5B63DF1AACA28600CE463D /* SettingsDuoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */; };
 		2C5B63E11AACA31E00CE463D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63E01AACA31E00CE463D /* back.png */; };
 		2C5B63E31AACA49C00CE463D /* SettingsQuitterPartie.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */; };
+		2C5C30181AAE28E500E5792C /* icon_29px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30141AAE28E500E5792C /* icon_29px.png */; };
+		2C5C30191AAE28E500E5792C /* icon_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30151AAE28E500E5792C /* icon_40px.png */; };
+		2C5C301A1AAE28E500E5792C /* icon_60px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30161AAE28E500E5792C /* icon_60px.png */; };
+		2C5C301B1AAE28E500E5792C /* icon_full_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30171AAE28E500E5792C /* icon_full_size.png */; };
+		2CA715BF1AAE2B1C00148351 /* icon_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BA1AAE2B1C00148351 /* icon_58px.png */; };
+		2CA715C01AAE2B1C00148351 /* icon_80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BB1AAE2B1C00148351 /* icon_80px.png */; };
+		2CA715C11AAE2B1C00148351 /* icon_87px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BC1AAE2B1C00148351 /* icon_87px.png */; };
+		2CA715C21AAE2B1C00148351 /* icon_120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BD1AAE2B1C00148351 /* icon_120px.png */; };
+		2CA715C31AAE2B1C00148351 /* icon_180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BE1AAE2B1C00148351 /* icon_180px.png */; };
 		2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */; };
 		2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A51AA5F557003C46E2 /* Gam_Insa.xcdatamodeld */; };
 		2CEC22A91AA5F557003C46E2 /* DuoMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A81AA5F557003C46E2 /* DuoMode.swift */; };
@@ -65,6 +74,15 @@
 		2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDuoView.swift; sourceTree = "<group>"; };
 		2C5B63E01AACA31E00CE463D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsQuitterPartie.png; sourceTree = "<group>"; };
+		2C5C30141AAE28E500E5792C /* icon_29px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29px.png; sourceTree = "<group>"; };
+		2C5C30151AAE28E500E5792C /* icon_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_40px.png; sourceTree = "<group>"; };
+		2C5C30161AAE28E500E5792C /* icon_60px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_60px.png; sourceTree = "<group>"; };
+		2C5C30171AAE28E500E5792C /* icon_full_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_full_size.png; sourceTree = "<group>"; };
+		2CA715BA1AAE2B1C00148351 /* icon_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58px.png; sourceTree = "<group>"; };
+		2CA715BB1AAE2B1C00148351 /* icon_80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80px.png; sourceTree = "<group>"; };
+		2CA715BC1AAE2B1C00148351 /* icon_87px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_87px.png; sourceTree = "<group>"; };
+		2CA715BD1AAE2B1C00148351 /* icon_120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120px.png; sourceTree = "<group>"; };
+		2CA715BE1AAE2B1C00148351 /* icon_180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_180px.png; sourceTree = "<group>"; };
 		2CEC229E1AA5F557003C46E2 /* Gam'Insa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gam'Insa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22A21AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +198,15 @@
 		2CEC22C61AA5FF12003C46E2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2CA715BA1AAE2B1C00148351 /* icon_58px.png */,
+				2CA715BB1AAE2B1C00148351 /* icon_80px.png */,
+				2CA715BC1AAE2B1C00148351 /* icon_87px.png */,
+				2CA715BD1AAE2B1C00148351 /* icon_120px.png */,
+				2CA715BE1AAE2B1C00148351 /* icon_180px.png */,
+				2C5C30141AAE28E500E5792C /* icon_29px.png */,
+				2C5C30151AAE28E500E5792C /* icon_40px.png */,
+				2C5C30161AAE28E500E5792C /* icon_60px.png */,
+				2C5C30171AAE28E500E5792C /* icon_full_size.png */,
 				2C5B63E21AACA49C00CE463D /* SettingsQuitterPartie.png */,
 				2C5B63E01AACA31E00CE463D /* back.png */,
 				2C5B63D81AAC9C7600CE463D /* SettingsCreerPartie.png */,
@@ -281,15 +308,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA715C21AAE2B1C00148351 /* icon_120px.png in Resources */,
 				2C5B63D41AAB426C00CE463D /* reset.png in Resources */,
 				2C5B63DB1AAC9C7600CE463D /* SettingsCreerPartie.png in Resources */,
+				2C5C301B1AAE28E500E5792C /* icon_full_size.png in Resources */,
 				813698561AA9DE1B003CEC61 /* Grid.png in Resources */,
 				2C5B63DC1AAC9C7600CE463D /* SettingsModeDuo.png in Resources */,
+				2C5C30191AAE28E500E5792C /* icon_40px.png in Resources */,
 				811E74531AA8D27A0056DC43 /* background.png in Resources */,
 				2CEC22AC1AA5F557003C46E2 /* Main.storyboard in Resources */,
+				2CA715C01AAE2B1C00148351 /* icon_80px.png in Resources */,
+				2CA715C11AAE2B1C00148351 /* icon_87px.png in Resources */,
 				81B7EEB31AAB94E0008611DA /* O_black.png in Resources */,
 				81B7EEB41AAB94E0008611DA /* O_white.png in Resources */,
+				2CA715C31AAE2B1C00148351 /* icon_180px.png in Resources */,
+				2CA715BF1AAE2B1C00148351 /* icon_58px.png in Resources */,
 				2C5B63E31AACA49C00CE463D /* SettingsQuitterPartie.png in Resources */,
+				2C5C30181AAE28E500E5792C /* icon_29px.png in Resources */,
 				81B7EEB61AAB94E0008611DA /* X_white.png in Resources */,
 				81B7EEB51AAB94E0008611DA /* X_black.png in Resources */,
 				2C5B63D51AAB426C00CE463D /* settings.png in Resources */,
@@ -297,6 +332,7 @@
 				2C5B63E11AACA31E00CE463D /* back.png in Resources */,
 				811E74511AA8D0290056DC43 /* Titre.png in Resources */,
 				81B7EEC01AAB9D69008611DA /* solo.png in Resources */,
+				2C5C301A1AAE28E500E5792C /* icon_60px.png in Resources */,
 				2C5B63DD1AAC9C7600CE463D /* SettingsProfil.png in Resources */,
 				81B7EEBF1AAB9D69008611DA /* multijoueur.png in Resources */,
 				2CEC22AE1AA5F557003C46E2 /* Images.xcassets in Resources */,
