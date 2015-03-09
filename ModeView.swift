@@ -28,11 +28,9 @@ class ModeView: UIViewController {
     
     override func viewDidLoad() {
         
-        var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
-        var soloHeight = (soloImage.frame.size.height)*(38/100)
-        var soloWidth = (soloImage.frame.size.width)*(30/100)
-        var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - (soloImage.frame.size.height)*(38/100) - (duoImage.frame.size.height)*(38/100) - (multiImage.frame.size.height)*(35/100))
-        space = space / 5
+        var imageWidth = self.view.frame.size.width - ((20/100)*self.view.frame.size.width)
+        var imageHeight = self.view.frame.size.height * (15/100)
+        var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 3*(imageHeight))/4
         
         var x = (self.view.frame.size.width-imageWidth)/2
         var y = titre.frame.origin.y + titre.frame.size.height + space
@@ -57,20 +55,21 @@ class ModeView: UIViewController {
         //SoloIcon
         soloMode.sizeToFit()
         
-        soloMode.frame=CGRectMake( (self.view.frame.size.width)/2 - ((soloImage.frame.size.width)*(30/100)/2), modeInfo.frame.origin.y +  modeInfo.frame.size.height + 20,(soloImage.frame.size.width)*(30/100),(soloImage.frame.size.height)*(38/100))
+        soloMode.frame=CGRectMake(x, y, imageWidth, imageHeight)
         soloMode.setImage(UIImage (named: "solo.png"), forState: .Normal)
+        soloMode.addTarget(self, action: "goSoloMode", forControlEvents: .TouchUpInside)
         
         //DuoIcon
         duoMode.sizeToFit()
         
-        duoMode.frame=CGRectMake( (self.view.frame.size.width)/2 - ((duoImage.frame.size.width)*(35/100)/2), modeInfo.frame.origin.y +  modeInfo.frame.size.height + soloMode.frame.size.height + 20 + 10, (duoImage.frame.size.width)*(35/100),(duoImage.frame.size.height)*(38/100))
+        duoMode.frame=CGRectMake(x, y + soloMode.frame.size.height, imageWidth, imageHeight)
         duoMode.setImage(UIImage (named: "duo.png"), forState: .Normal)
         duoMode.addTarget(self, action: "goDuoMode", forControlEvents: .TouchUpInside)
         
         //MultiIcon
         multiMode.sizeToFit()
         
-        multiMode.frame=CGRectMake( (self.view.frame.size.width)/2 - (multiImage.frame.size.width)*(30/100)/2, modeInfo.frame.origin.y +  modeInfo.frame.size.height + soloMode.frame.size.height + duoMode.frame.size.height + 20 + 20 , (multiImage.frame.size.width)*(30/100),(multiImage.frame.size.height)*(35/100))
+       multiMode.frame=CGRectMake(x, y + duoMode.frame.size.height + soloMode.frame.size.height, imageWidth, imageHeight)
         multiMode.setImage(UIImage (named: "multijoueur.png"), forState: .Normal)
         
         
@@ -89,12 +88,17 @@ class ModeView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //let addItemAlertViewTag = 0
-    //let addItemTextAlertViewTag = 1
+    
+    func goSoloMode() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloLevelID") as SoloModeLevelSelection
+        vc.parent = self
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
     
     func goDuoMode() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloID") as ViewController
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.parent = self
         self.presentViewController(vc, animated: true, completion: nil)
         

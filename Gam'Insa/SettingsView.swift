@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class SettingsView: ViewController {
+class SettingsView: ModeView {
     
-    var runningGame: ViewController!
+    var runningGame: TicTacToc!
     
     let settingsProfil = UIButton()
     let settingsCreerPartie = UIButton()
@@ -24,7 +24,7 @@ class SettingsView: ViewController {
     let settingsDuoModeImg = UIImage(named: "SettingsModeDuo.png")
     let settingsQuitterPartieImg = UIImage(named: "SettingsQuitterPartie.png")
     let backButtonImg = UIImage(named: "back.png")
-    
+
     override func viewDidLoad() {
 
         var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
@@ -51,32 +51,22 @@ class SettingsView: ViewController {
         
         settingsProfil.setImage(settingsProfilImg, forState: .Normal)
         settingsProfil.sizeToFit()
-        
         settingsProfil.frame = CGRectMake(x, y, imageWidth, imageHeight)
         
-        
-        //settingsProfil.frame = CGRectMake ((self.view.frame.size.width - settingsProfil.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 40, settingsProfil.frame.size.width, settingsProfil.frame.size.height)
+
         
         settingsCreerPartie.setImage(settingsCreerPartieImg, forState: .Normal)
         settingsCreerPartie.sizeToFit()
-        
         settingsCreerPartie.frame = CGRectMake(x, y + settingsProfil.frame.size.height, imageWidth, imageHeight)
         
-        //settingsCreerPartie.frame = CGRectMake ((self.view.frame.size.width - settingsCreerPartie.frame.size.width)/2, settingsProfil.frame.origin.y + settingsProfil.frame.size.height + 20, settingsCreerPartie.frame.size.width, settingsCreerPartie.frame.height)
         
         settingsDuoMode.setImage(settingsDuoModeImg, forState: .Normal)
         settingsDuoMode.sizeToFit()
-        
         settingsDuoMode.frame = CGRectMake(x, y + settingsProfil.frame.size.height + settingsCreerPartie.frame.size.height , imageWidth, imageHeight)
-        
-        //settingsDuoMode.frame = CGRectMake ((self.view.frame.size.width - settingsDuoMode.frame.size.width)/2, settingsCreerPartie.frame.origin.y + settingsCreerPartie.frame.size.height + 20, settingsDuoMode.frame.size.width, settingsDuoMode.frame.size.height)
         
         settingsQuitterPartie.setImage(settingsQuitterPartieImg, forState: .Normal)
         settingsQuitterPartie.sizeToFit()
-        
         settingsQuitterPartie.frame = CGRectMake(x, y + settingsProfil.frame.size.height + settingsCreerPartie.frame.size.height + settingsDuoMode.frame.size.height , imageWidth, imageHeight)
-        
-        //settingsQuitterPartie.frame = CGRectMake((self.view.frame.size.width - settingsProfil.frame.size.width)/2, settingsDuoMode.frame.origin.y + settingsDuoMode.frame.size.height + 20, settingsQuitterPartie.frame.size.width, settingsQuitterPartie.frame.size.height)
         settingsQuitterPartie.addTarget(self, action: "quitterPartie", forControlEvents: .TouchUpInside)
         
         //Initialisation
@@ -97,7 +87,7 @@ class SettingsView: ViewController {
     
     func back(){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloID") as ViewController
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.settingsParent = self
         self.presentViewController(vc, animated: true, completion: nil)
     }

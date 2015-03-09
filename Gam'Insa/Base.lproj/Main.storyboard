@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jB7-Vc-rTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279.5" y="321.5"/>
+            <point key="canvasLocation" x="-248.5" y="321.5"/>
         </scene>
         <!--Settings Duo View-->
         <scene sceneID="gqa-Pw-0G0">
@@ -59,12 +59,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7x-fP-740" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.5" y="321.5"/>
+            <point key="canvasLocation" x="-724.5" y="-90.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Solo Mode Level Selection-->
+        <scene sceneID="aes-IY-YRb">
+            <objects>
+                <viewController storyboardIdentifier="SoloLevelID" id="919-Lq-muB" customClass="SoloModeLevelSelection" customModule="Gam_Insa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dmQ-Tt-5Ya"/>
+                        <viewControllerLayoutGuide type="bottom" id="zja-ke-Tiy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7G9-qz-bI5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJP-Ey-GRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761.5" y="-120.5"/>
+        </scene>
+        <!--Solo Mode-->
+        <scene sceneID="Fsk-HK-lcu">
+            <objects>
+                <viewController storyboardIdentifier="SoloID" id="ryw-L9-eXJ" customClass="SoloMode" customModule="Gam_Insa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WAa-h3-XnX"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Bn-Nj-uuh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="76B-ck-izi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbp-6x-Acf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.5" y="-120.5"/>
+        </scene>
+        <!--Duo Mode-->
         <scene sceneID="N0E-nb-Zjo">
             <objects>
-                <viewController storyboardIdentifier="SoloID" id="h7z-22-8HQ" customClass="ViewController" customModule="Gam_Insa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DuoID" id="h7z-22-8HQ" customClass="DuoMode" customModule="Gam_Insa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ELw-Cy-lXH"/>
                         <viewControllerLayoutGuide type="bottom" id="DZs-vD-QdF"/>
@@ -78,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niN-7c-EBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.5" y="321.5"/>
+            <point key="canvasLocation" x="754.5" y="611.5"/>
         </scene>
     </scenes>
 </document>

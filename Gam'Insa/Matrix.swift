@@ -13,7 +13,7 @@ import UIKit
 
 class Matrix:NSObject{
     
-    var papa : ViewController?
+    var papa : DuoMode?
     var mat:Array<Array<Player>>!
     
     func createMatrix(){

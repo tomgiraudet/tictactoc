@@ -17,20 +17,20 @@ class Case: UIView {
     var i : Int = 0
     var j : Int = 0
     var tapRec = UITapGestureRecognizer()
-    var papa : ViewController?
+    var papa : TicTacToc?
     
     
    /* override init(){
         super.init()
     }*/
     
-    func initView (i : Int, j : Int, _papa: ViewController){
+    func initView (i : Int, j : Int, _papa: TicTacToc){
         self.i = i
         self.j = j
         self.papa = _papa
         self.player = nil
         self.activate = false
-        tapRec.addTarget(self, action: "touchedCase")
+        tapRec.addTarget(self, action: "touchedCase:")
         self.addGestureRecognizer(tapRec)
     }
     
@@ -52,7 +52,8 @@ class Case: UIView {
         self.player = _player
     }
     
-    func touchedCase() {
+    func touchedCase(_caseJouee: Case) {
+        println("case touched")
         self.papa?.caseJouee(self)
     }
     
