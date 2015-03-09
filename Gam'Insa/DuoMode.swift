@@ -16,7 +16,7 @@ class DuoMode: TicTacToc {
         super.viewDidLoad()
         //Players
         player1 = Player()
-        player1.createPlayer("Juliette", img:"X_black.png")
+        player1.createPlayer("Yvoburne", img:"X_black.png")
         player2 = Player()
         player2.createPlayer("Tom", img:"O_black.png")
         currentPlayer = player1

@@ -18,6 +18,8 @@ class SoloModeLevelSelection: UIViewController{
     
     let backButtonImg = UIImage(named: "back.png")
     let backButton = UIButton()
+    let slider = UISlider()
+    let levelLabel = UILabel()
     
     override func viewDidLoad() {
         
@@ -42,10 +44,37 @@ class SoloModeLevelSelection: UIViewController{
         backButton.frame = CGRectMake (5, 20, 25, 25)
         backButton.addTarget(self, action: "back", forControlEvents: .TouchUpInside)
         
+        // Slider
+        slider.maximumValue = 3
+        slider.minimumValue = 1
+        slider.sizeToFit()
+        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height, slider.frame.size.width, slider.frame.size.height)
+        
+        // LevelLabel
+        var level = Int(slider.value)
+        level = 1
+        levelLabel.text = "\(level)"
+        levelLabel.frame = CGRectMake ((self.view.frame.size.width - levelLabel.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + slider.frame.size.height, levelLabel.frame.size.width, levelLabel.frame.size.height)
+        levelLabel.textColor = .blackColor()
+        
+        
         //Initialisation
         self.view.addSubview(background)
         self.view.addSubview(titre)
         self.view.addSubview(backButton)
+        self.view.addSubview(slider)
+        self.view.addSubview(levelLabel)
+        
+        
+        
+    }
+    
+    func sliderValueChanged(sender: UISlider) {
+        var level = Int(slider.value)
+        levelLabel.text = "\(level)"
+        levelLabel.frame = CGRectMake ((self.view.frame.size.width - levelLabel.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + slider.frame.size.height, levelLabel.frame.size.width, levelLabel.frame.size.height)
+        levelLabel.textColor = .blackColor()
+        
     }
     
     override func didReceiveMemoryWarning() {
