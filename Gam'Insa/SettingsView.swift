@@ -36,7 +36,7 @@ class SettingsView: ViewController {
         
         //Titre
         titre.sizeToFit()
-        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
+        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 20, titre.frame.size.width, titre.frame.size.height)
         
         //Background
         background.frame.size.width = self.view.frame.size.width

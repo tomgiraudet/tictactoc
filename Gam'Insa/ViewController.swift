@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         
         // Titre
         titre.sizeToFit()
-        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
+        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 20, titre.frame.size.width, titre.frame.size.height)
         
         // Grille
         grid.frame.size.width = self.view.frame.size.width-20
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
         // GameInfo
-        gameInfo.frame = CGRectMake(10, titre.frame.size.height+30, self.view.frame.width-20, 50)
+        gameInfo.frame = CGRectMake(10, titre.frame.origin.y+titre.frame.size.height, self.view.frame.width-20, 50)
         gameInfo.text = "\(player1.name) - \(score1) vs \(score2) - \(player2.name)"
         gameInfo.textAlignment = .Center
         gameInfo.textColor = UIColor.blackColor()
@@ -152,7 +152,7 @@ class ViewController: UIViewController {
             default: println("C'est dieu qui a gagné")
             }
             popUpWin(matrice.matrixGagnante().1)
-            reset()      //J'ai enlevé ton matrix.createMatrix puisque dans le viewDidLoad c'est fait
+            reset()
         }
         if matrice.matrixGagnante().0 == 2 {
             popUpTie()
