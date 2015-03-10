@@ -58,7 +58,7 @@ class SoloModeLevelSelection: UIViewController{
         goButton.setImage(goButtonImg, forState: .Normal)
         goButton.sizeToFit()
         goButton.frame.origin.x = x
-        goButton.frame.origin.y = y
+        goButton.frame.origin.y = self.view.frame.height - 2*imageHeight
         goButton.frame.size.width = imageWidth
         goButton.frame.size.height = imageHeight
         goButton.addTarget(self, action: "goGame", forControlEvents: .TouchUpInside)
