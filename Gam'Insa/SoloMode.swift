@@ -13,7 +13,6 @@ class SoloMode: TicTacToc {
     
     var level: Int! // Value between 1 and 3 that gives the level of the game.
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Players
@@ -21,7 +20,6 @@ class SoloMode: TicTacToc {
         player1.createPlayer("Juliette", img:"X_black.png")
         player2 = Player()
         player2.createPlayer("Dieu", img:"O_black.png")
-        //currentPlayer = player1
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +29,7 @@ class SoloMode: TicTacToc {
     
     // Fonction appelée lorsqu'une case est touchée
     override func caseJouee(_caseJouee: Case){
-        // Gestion de l'affichage et du current player
+        // Gestion de l'affichage
         if (_caseJouee.player == nil){
             _caseJouee.setPlayer(_caseJouee.papa!.player1)
             _caseJouee.placeCase(_caseJouee.papa!.player1)
@@ -51,21 +49,27 @@ class SoloMode: TicTacToc {
             popUpTie()
             reset()
         }
-    }
+        println("Fin du coup du joueur réel")
     // Fin du coup du joueur, au tour de l'IA de jouer
     
     // Définition de la case à jouer :
     var whereToPlay: (iToPlay: Int,jToPlay: Int)
-    
-    switch level {
-    case 1: //whereToPlay = easyGame()
-    case 2: //whereToPlay = mediumGame()
-    case 3: //whereToPlay = hardGame()
+        whereToPlay = (-1,-1)
+    println("Début du coup de l'IA")
+        switch self.level {
+    case 1: whereToPlay = matrice.easyGame()
+    case 2: whereToPlay = matrice.mediumGame()
+    case 3: whereToPlay = matrice.hardGame()
     default: println("C'est encore un coup de dieu ...")
     }
-    
+    println("\(whereToPlay)")
+        
+    // Gestion de l'affichage
+        _caseJouee.setPlayer(_caseJouee.papa!.player2)
+        _caseJouee.placeCase(_caseJouee.papa!.player2)
+
     // Gestion de la matrice
-    matrice.addCase(whereToPlay.0, j: whereToPlay.1, _player: player2)
+    matrice.addCase(whereToPlay.0,j: whereToPlay.1,_player: player2)
     if matrice.matrixGagnante().0 == 1 {
         switch matrice.matrixGagnante().1{
         case player1.name: score1++
@@ -78,9 +82,11 @@ class SoloMode: TicTacToc {
     if matrice.matrixGagnante().0 == 2 {
         popUpTie()
         reset()
-    }
+        }
+        println("Fin du tour de l'IA")
+} // Fin fonction
+
 }
 
 
 
-}

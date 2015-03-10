@@ -33,25 +33,20 @@ class ModeView: UIViewController {
         var imageHeight = proportion*imageWidth
     
         
-        var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 3*(imageHeight))/4
+        var space = (self.view.frame.size.height - modeInfo.frame.origin.y + modeInfo.frame.size.height - 3*(imageHeight))/4
         
         
         var x = (self.view.frame.size.width-imageWidth)/2
-        var y = titre.frame.origin.y + titre.frame.size.height + modeInfo.frame.size.height + space
+        var y = 100 + modeInfo.frame.origin.y + modeInfo.frame.size.height + modeInfo.frame.size.height + space
 
         
-        
-        
-        //Titre
-        titre.sizeToFit()
-        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
         
         //Background
         background.frame.size.width = self.view.frame.size.width
         background.frame.size.height = self.view.frame.size.height
-        
+    
         // ModeInfo
-        modeInfo.frame = CGRectMake(10, titre.frame.size.height+40, self.view.frame.width-20, 50)
+        modeInfo.frame = CGRectMake(10, 100, self.view.frame.width-20, 50)
         modeInfo.text = "Choisis ton mode de jeu !"
         modeInfo.textAlignment = .Center
         modeInfo.textColor = UIColor.blackColor()
@@ -85,7 +80,7 @@ class ModeView: UIViewController {
         
         //Initialisation
         self.view.addSubview(background)
-        self.view.addSubview(titre)
+        //self.view.addSubview(titre)
         self.view.addSubview(modeInfo)
         self.view.addSubview(soloMode)
         self.view.addSubview(duoMode)

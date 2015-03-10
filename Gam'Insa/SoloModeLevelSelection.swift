@@ -51,14 +51,14 @@ class SoloModeLevelSelection: UIViewController{
         slider.maximumValue = 3
         slider.minimumValue = 1
         slider.sizeToFit()
-        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 100, slider.frame.size.width, slider.frame.size.height)
+        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 110, slider.frame.size.width, slider.frame.size.height)
         slider.addTarget(self, action: "sliderValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         
         // Go Button
         goButton.setImage(goButtonImg, forState: .Normal)
         goButton.sizeToFit()
         goButton.frame.origin.x = x
-        goButton.frame.origin.y = y
+        goButton.frame.origin.y = 2*y
         goButton.frame.size.width = imageWidth
         goButton.frame.size.height = imageHeight
         goButton.addTarget(self, action: "goGame", forControlEvents: .TouchUpInside)
@@ -66,7 +66,7 @@ class SoloModeLevelSelection: UIViewController{
         
         //Initialisation
         self.view.addSubview(background)
-        self.view.addSubview(titre)
+        //self.view.addSubview(titre)
         self.view.addSubview(backButton)
         self.view.addSubview(slider)
         self.view.addSubview(levelLabel)
