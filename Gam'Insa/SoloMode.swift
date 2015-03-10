@@ -11,6 +11,8 @@ import UIKit
 
 class SoloMode: TicTacToc {
     
+    var level: Int! // Value between 1 and 3 that gives the level of the game.
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

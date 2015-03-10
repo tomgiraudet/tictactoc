@@ -20,6 +20,9 @@ class SoloModeLevelSelection: UIViewController{
     let backButton = UIButton()
     let slider = UISlider()
     let levelLabel = UILabel()
+    let goButton = UIButton()
+    
+    let goButtonImg = UIImage(named: "launch_game.png")
     
     override func viewDidLoad() {
         
@@ -39,7 +42,7 @@ class SoloModeLevelSelection: UIViewController{
         background.frame.size.width = self.view.frame.size.width
         background.frame.size.height = self.view.frame.size.height
         
-        // Button
+        // Back Button
         backButton.setImage(backButtonImg, forState: .Normal)
         backButton.frame = CGRectMake (5, 20, 25, 25)
         backButton.addTarget(self, action: "back", forControlEvents: .TouchUpInside)
@@ -51,12 +54,23 @@ class SoloModeLevelSelection: UIViewController{
         slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 100, slider.frame.size.width, slider.frame.size.height)
         slider.addTarget(self, action: "sliderValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         
+        // Go Button
+        goButton.setImage(goButtonImg, forState: .Normal)
+        goButton.sizeToFit()
+        goButton.frame.origin.x = x
+        goButton.frame.origin.y = y
+        goButton.frame.size.width = imageWidth
+        goButton.frame.size.height = imageHeight
+        goButton.addTarget(self, action: "goGame", forControlEvents: .TouchUpInside)
+        
+        
         //Initialisation
         self.view.addSubview(background)
         self.view.addSubview(titre)
         self.view.addSubview(backButton)
         self.view.addSubview(slider)
         self.view.addSubview(levelLabel)
+        self.view.addSubview(goButton)
         
         
         
@@ -80,6 +94,14 @@ class SoloModeLevelSelection: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func goGame(){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("SoloID") as SoloMode
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        vc.level = Int(slider.value)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func back(){
