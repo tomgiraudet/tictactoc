@@ -166,4 +166,17 @@ class Matrix:NSObject{
     }
     
     
+    func easyGame() -> (Int, Int) {
+        return (1,1)
+    }
+    
+    func mediumGame() -> (Int, Int) {
+        return (1,1)
+    }
+    
+    func hardGame() -> (Int, Int) {
+        return (1,1)
+    }
+    
+    
 }

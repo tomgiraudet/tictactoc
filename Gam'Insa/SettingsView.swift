@@ -34,7 +34,7 @@ class SettingsView: ModeView {
         var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 4*(imageHeight))/5
         
         var x = (self.view.frame.size.width-imageWidth)/2
-        var y = titre.frame.origin.y + titre.frame.size.height + space
+        var y = CGFloat(100) //+ space
         
         //Titre
         titre.sizeToFit()
@@ -85,7 +85,7 @@ class SettingsView: ModeView {
         
         //Initialisation
         self.view.addSubview(background)
-        self.view.addSubview(titre)
+        //self.view.addSubview(titre)
         self.view.addSubview(backButton)
         self.view.addSubview(settingsProfil)
         self.view.addSubview(settingsCreerPartie)

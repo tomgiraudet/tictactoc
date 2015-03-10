@@ -29,6 +29,7 @@
 		2CA715C21AAE2B1C00148351 /* icon_120px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BD1AAE2B1C00148351 /* icon_120px.png */; };
 		2CA715C31AAE2B1C00148351 /* icon_180px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BE1AAE2B1C00148351 /* icon_180px.png */; };
 		2CA715C51AAF2E3700148351 /* launch_game.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715C41AAF2E3700148351 /* launch_game.png */; };
+		2CA715C71AAF93F000148351 /* choisis_ton_mode_de_jeu.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715C61AAF93F000148351 /* choisis_ton_mode_de_jeu.png */; };
 		2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */; };
 		2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A51AA5F557003C46E2 /* Gam_Insa.xcdatamodeld */; };
 		2CEC22A91AA5F557003C46E2 /* DuoMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC22A81AA5F557003C46E2 /* DuoMode.swift */; };
@@ -85,6 +86,7 @@
 		2CA715BD1AAE2B1C00148351 /* icon_120px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120px.png; sourceTree = "<group>"; };
 		2CA715BE1AAE2B1C00148351 /* icon_180px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_180px.png; sourceTree = "<group>"; };
 		2CA715C41AAF2E3700148351 /* launch_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_game.png; sourceTree = "<group>"; };
+		2CA715C61AAF93F000148351 /* choisis_ton_mode_de_jeu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choisis_ton_mode_de_jeu.png; sourceTree = "<group>"; };
 		2CEC229E1AA5F557003C46E2 /* Gam'Insa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gam'Insa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC22A21AA5F557003C46E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		2CEC22C61AA5FF12003C46E2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2CA715C61AAF93F000148351 /* choisis_ton_mode_de_jeu.png */,
 				2CA715C41AAF2E3700148351 /* launch_game.png */,
 				2CA715BA1AAE2B1C00148351 /* icon_58px.png */,
 				2CA715BB1AAE2B1C00148351 /* icon_80px.png */,
@@ -325,6 +328,7 @@
 				81B7EEB31AAB94E0008611DA /* O_black.png in Resources */,
 				2CA715C51AAF2E3700148351 /* launch_game.png in Resources */,
 				81B7EEB41AAB94E0008611DA /* O_white.png in Resources */,
+				2CA715C71AAF93F000148351 /* choisis_ton_mode_de_jeu.png in Resources */,
 				2CA715C31AAE2B1C00148351 /* icon_180px.png in Resources */,
 				2CA715BF1AAE2B1C00148351 /* icon_58px.png in Resources */,
 				2C5B63E31AACA49C00CE463D /* SettingsQuitterPartie.png in Resources */,

@@ -20,6 +20,7 @@ class TicTacToc: UIViewController {
     var score2: Int = 0
     var currentPlayer:Player!
     var matrice:Matrix!
+    var matCase = Array<Array<Case>>()
     
     let grid = UIImageView(image: UIImage(named: "Grid.png"))
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
@@ -80,7 +81,7 @@ class TicTacToc: UIViewController {
         matrice = Matrix()
         matrice.createMatrix()
         self.view.addSubview(background)
-        self.view.addSubview(titre)
+        //self.view.addSubview(titre)
         self.view.addSubview(grid)
         //self.view.addSubview(gameInfo)
         self.view.addSubview(settingsButton)
@@ -104,6 +105,7 @@ class TicTacToc: UIViewController {
                 caseToAdd.frame.origin.y = grid.frame.origin.y + (CGFloat(i)*(caseToAdd.frame.height))
                 caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
                 self.view.addSubview(caseToAdd)
+                // Penser à ajouter la case à la matrice de cases
                 
             }
         }
