@@ -56,10 +56,10 @@ class ModeView: UIViewController {
         
         // Selection mode de jeu 
         choisis_ton_mode_de_jeu.sizeToFit()
+        choisis_ton_mode_de_jeu.frame.size.width = self.view.frame.size.width * (80/100)
         choisis_ton_mode_de_jeu.frame.origin.x = (self.view.frame.size.width-choisis_ton_mode_de_jeu.frame.size.width)/2
-        choisis_ton_mode_de_jeu.frame.origin.y = 100
-
-        
+        choisis_ton_mode_de_jeu.frame.origin.y = self.view.frame.size.height * (10/100)
+    
         
         //SoloIcon
         soloMode.setImage(UIImage (named: "solo.png"), forState: .Normal)
