@@ -28,7 +28,8 @@ class SettingsView: ModeView {
     override func viewDidLoad() {
 
         var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
-        var imageHeight = self.view.frame.size.height * (18/100)
+        var proportion = ((settingsProfilImg?.size.height)!/(settingsProfilImg?.size.width)!)
+        var imageHeight = proportion*imageWidth
         var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 4*(imageHeight))/5
         
         var x = (self.view.frame.size.width-imageWidth)/2

@@ -29,11 +29,15 @@ class ModeView: UIViewController {
     override func viewDidLoad() {
         
         var imageWidth = self.view.frame.size.width - ((20/100)*self.view.frame.size.width)
-        var imageHeight = self.view.frame.size.height * (15/100)
+        var proportion = ((soloImage.frame.size.height)/(soloImage.frame.size.width))
+        var imageHeight = proportion*imageWidth
+    
+        
         var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 3*(imageHeight))/4
         
+        
         var x = (self.view.frame.size.width-imageWidth)/2
-        var y = titre.frame.origin.y + titre.frame.size.height + space
+        var y = titre.frame.origin.y + titre.frame.size.height + modeInfo.frame.size.height + space
 
         
         
@@ -53,24 +57,30 @@ class ModeView: UIViewController {
         modeInfo.textColor = UIColor.blackColor()
         
         //SoloIcon
-        soloMode.sizeToFit()
-        
-        soloMode.frame=CGRectMake(x, y, imageWidth, imageHeight)
         soloMode.setImage(UIImage (named: "solo.png"), forState: .Normal)
         soloMode.addTarget(self, action: "goSoloMode", forControlEvents: .TouchUpInside)
+        soloMode.sizeToFit()
+        soloMode.frame.origin.x = x
+        soloMode.frame.origin.y = y 
+        soloMode.frame.size.height = imageHeight
+        soloMode.frame.size.width = imageWidth
         
         //DuoIcon
-        duoMode.sizeToFit()
-        
-        duoMode.frame=CGRectMake(x, y + soloMode.frame.size.height, imageWidth, imageHeight)
         duoMode.setImage(UIImage (named: "duo.png"), forState: .Normal)
         duoMode.addTarget(self, action: "goDuoMode", forControlEvents: .TouchUpInside)
+        duoMode.sizeToFit()
+        duoMode.frame.origin.x = x
+        duoMode.frame.origin.y = y + imageHeight + (15/100)*imageHeight
+        duoMode.frame.size.height = imageHeight
+        duoMode.frame.size.width = imageWidth
         
         //MultiIcon
-        multiMode.sizeToFit()
-        
-       multiMode.frame=CGRectMake(x, y + duoMode.frame.size.height + soloMode.frame.size.height, imageWidth, imageHeight)
         multiMode.setImage(UIImage (named: "multijoueur.png"), forState: .Normal)
+        multiMode.sizeToFit()
+        multiMode.frame.origin.x = x
+        multiMode.frame.origin.y = y + 2*imageHeight + (30/100)*imageHeight
+        multiMode.frame.size.height = imageHeight
+        multiMode.frame.size.width = imageWidth
         
         
         //Initialisation

@@ -125,6 +125,7 @@ class TicTacToc: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    
     func popUpWin(_playerName: String) {
         let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
             "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
