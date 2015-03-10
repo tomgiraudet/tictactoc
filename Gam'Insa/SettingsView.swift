@@ -30,6 +30,7 @@ class SettingsView: ModeView {
         var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
         var proportion = ((settingsProfilImg?.size.height)!/(settingsProfilImg?.size.width)!)
         var imageHeight = proportion*imageWidth
+        
         var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 4*(imageHeight))/5
         
         var x = (self.view.frame.size.width-imageWidth)/2
@@ -52,22 +53,34 @@ class SettingsView: ModeView {
         
         settingsProfil.setImage(settingsProfilImg, forState: .Normal)
         settingsProfil.sizeToFit()
-        settingsProfil.frame = CGRectMake(x, y, imageWidth, imageHeight)
+        settingsProfil.frame.origin.x = x
+        settingsProfil.frame.origin.y = y
+        settingsProfil.frame.size.height = imageHeight
+        settingsProfil.frame.size.width = imageWidth
         
-
         
         settingsCreerPartie.setImage(settingsCreerPartieImg, forState: .Normal)
         settingsCreerPartie.sizeToFit()
-        settingsCreerPartie.frame = CGRectMake(x, y + settingsProfil.frame.size.height, imageWidth, imageHeight)
-        
+        settingsCreerPartie.frame.origin.x = x
+        settingsCreerPartie.frame.origin.y = y + imageHeight + (5/100)*imageHeight
+        settingsCreerPartie.frame.size.height = imageHeight
+        settingsCreerPartie.frame.size.width = imageWidth
+    
         
         settingsDuoMode.setImage(settingsDuoModeImg, forState: .Normal)
         settingsDuoMode.sizeToFit()
-        settingsDuoMode.frame = CGRectMake(x, y + settingsProfil.frame.size.height + settingsCreerPartie.frame.size.height , imageWidth, imageHeight)
+        settingsDuoMode.frame.origin.x = x
+        settingsDuoMode.frame.origin.y = y + 2*imageHeight + (10/100)*imageHeight
+        settingsDuoMode.frame.size.height = imageHeight
+        settingsDuoMode.frame.size.width = imageWidth
+        
         
         settingsQuitterPartie.setImage(settingsQuitterPartieImg, forState: .Normal)
         settingsQuitterPartie.sizeToFit()
-        settingsQuitterPartie.frame = CGRectMake(x, y + settingsProfil.frame.size.height + settingsCreerPartie.frame.size.height + settingsDuoMode.frame.size.height , imageWidth, imageHeight)
+        settingsQuitterPartie.frame.origin.x = x
+        settingsQuitterPartie.frame.origin.y = y + 3*imageHeight + (15/100)*imageHeight
+        settingsQuitterPartie.frame.size.height = imageHeight
+        settingsQuitterPartie.frame.size.width = imageWidth
         settingsQuitterPartie.addTarget(self, action: "quitterPartie", forControlEvents: .TouchUpInside)
         
         //Initialisation

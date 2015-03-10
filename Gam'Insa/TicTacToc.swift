@@ -61,6 +61,7 @@ class TicTacToc: UIViewController {
         gameInfo.text = "\(player1.name) - \(score1) vs \(score2) - \(player2.name)"
         gameInfo.textAlignment = .Center
         gameInfo.textColor = UIColor.blackColor()
+        //gameInfo.font = UIFont (name: "HelveticaNeue-UltraLight", size: 30)
         
         // TopButton
         settingsButton.frame = CGRectMake (5, 20, 25, 25)
