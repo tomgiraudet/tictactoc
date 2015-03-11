@@ -13,7 +13,7 @@ import UIKit
 
 class Matrix:NSObject{
     
-    var papa : DuoMode?
+    var papaDuo : DuoMode?
     var mat:Array<Array<Player>>!
     
     func createMatrix(){
@@ -28,10 +28,8 @@ class Matrix:NSObject{
     
     func addCase(i: Int, j: Int, _player: Player){
         mat[i][j] = _player
-        println("Case ajoutée à la matrice")
         for u in 0...2 {
             for v in 0...2{
-            println("mat[\(u)][\(v)] =\(mat[u][v].name)")
             }
         }
     }
@@ -166,8 +164,23 @@ class Matrix:NSObject{
     }
     
     
-    func easyGame() -> (Int, Int) {
-        return (1,1)
+    func easyGame(_matCase: Array<Array<Case>>) -> (Int, Int) {
+        println("Debut func easyGame")
+        var played = false
+        println("\(played)")
+        var i = -1
+        var j = -1
+        while !(played) {
+            // Gives a number between 0 and 2
+            i = Int(arc4random_uniform(3))
+            j = Int(arc4random_uniform(3))
+            println("Case proposée : \(i);\(j) et played : \(played)")
+            var caseRandom = Case()
+            if _matCase[i][j].player == nil{
+                played = true
+            }
+        }
+        return (i,j)
     }
     
     func mediumGame() -> (Int, Int) {
@@ -176,7 +189,7 @@ class Matrix:NSObject{
     
     func hardGame() -> (Int, Int) {
         return (1,1)
-    }
+        }
     
     
 }

@@ -77,6 +77,12 @@ class TicTacToc: UIViewController {
         background.frame.size.width = self.view.frame.size.width
         background.frame.size.height = self.view.frame.size.height
         
+        // Matrice de Cases
+        for column in 0...2 {
+            var _case = Case()
+            matCase.append(Array(count:3, repeatedValue:_case))
+        }
+        
         // Initialisation
         matrice = Matrix()
         matrice.createMatrix()
@@ -106,7 +112,7 @@ class TicTacToc: UIViewController {
                 caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
                 self.view.addSubview(caseToAdd)
                 // Penser à ajouter la case à la matrice de cases
-                
+                matCase[i][j] = caseToAdd
             }
         }
     }
@@ -142,5 +148,7 @@ class TicTacToc: UIViewController {
         alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+
     
 }
