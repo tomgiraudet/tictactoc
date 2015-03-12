@@ -33,8 +33,11 @@ class TicTacToc: UIViewController {
     let settingsButtonImg = UIImage(named: "settings.png")
     let resetButtonImg = UIImage(named: "reset.png")
     
+    // Pop up
     let backPopUpView = UIView()
     let popUpView = UIView()
+    let winLabel = UILabel()
+    let tieLabel = UILabel()
     
     
     override func viewDidLoad() {
@@ -42,9 +45,22 @@ class TicTacToc: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Pop up hidden
-        self.popUpView.hidden = true
-        self.backPopUpView.hidden = true
+        // Win pop up
+        popUpView.alpha = 1
+        popUpView.sizeToFit()
+        popUpView.backgroundColor = .grayColor()
+        popUpView.frame.size.width = self.view.frame.width - 40
+        popUpView.frame.size.height = self.view.frame.height * (30/100)
+        popUpView.frame.origin.x = 20
+        popUpView.frame.origin.y = self.view.frame.height/2 - popUpView.frame.height/2
+        popUpView.layer.cornerRadius = 10.0;
+        
+        winLabel.sizeToFit()
+        winLabel.text = "Victoire !"
+        winLabel.frame.origin.x = 0
+        winLabel.frame.origin.y = 0
+        winLabel.textColor = .blackColor()
+        popUpView.addSubview(winLabel)
         
         //Players
         player1 = Player()
@@ -99,6 +115,8 @@ class TicTacToc: UIViewController {
         //self.view.addSubview(gameInfo)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
+        self.view.addSubview(popUpView)
+        popUpView.addSubview(winLabel)
         initCases()
     }
     
@@ -148,15 +166,9 @@ class TicTacToc: UIViewController {
         //visualEffectView.frame = self.view.bounds
         //self.view.addSubview(visualEffectView)
         
-        self.popUpView.sizeToFit()
-        self.popUpView.frame.origin.x = self.view.frame.width/2 - popUpView.frame.width/2
-        self.popUpView.frame.origin.y = self.view.frame.height/2 - popUpView.frame.height/2
-        self.popUpView.frame.size.width = self.view.frame.width - 40
-        self.popUpView.frame.size.height = self.view.frame.height * (30/100)
-        self.popUpView.layer.cornerRadius = 10.0;
+        //self.popUpView.alpha = 1
+        println("coucou")
         
-        self.popUpView.hidden = false
-        self.view.addSubview(popUpView)
         
         
     }
