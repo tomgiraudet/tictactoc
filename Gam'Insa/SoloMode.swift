@@ -44,14 +44,20 @@ class SoloMode: TicTacToc {
             }
             popUpWin(matrice.matrixGagnante().1)
             reset()
+        }else{
+            if matrice.matrixGagnante().0 == 2 {
+                popUpTie()
+                reset()
+            }else{
+                println("Fin du coup du joueur réel")
+                // Fin du coup du joueur, au tour de l'IA de jouer
+                let delay = 0.5 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()){
+                    self.timeToMakeGodPlayTicTacToc()
+                }
+            }
         }
-        if matrice.matrixGagnante().0 == 2 {
-            popUpTie()
-            reset()
-        }
-        println("Fin du coup du joueur réel")
-    // Fin du coup du joueur, au tour de l'IA de jouer
-    timeToMakeGodPlayTicTacToc()
 }
 
 

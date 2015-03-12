@@ -42,7 +42,8 @@ class Case: UIView {
         playedImage.frame.size.width = self.frame.size.width * (80/100)
         playedImage.frame.size.height = self.frame.size.height * (80/100)
         playedImage.frame.origin.x = 16 - CGFloat((self.j))*6
-        playedImage.frame.origin.y = 17 
+        playedImage.frame.origin.y = 17
+        
 
         self.addSubview(playedImage)
         
