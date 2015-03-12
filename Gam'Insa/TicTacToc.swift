@@ -119,9 +119,9 @@ class TicTacToc: GeneralView {
                 caseToAdd.initView(i,j: j, _papa: self)
                 caseToAdd.frame.size.width = (grid.frame.size.width/3)-2
                 caseToAdd.frame.size.height = (grid.frame.size.height/3)-2
-                caseToAdd.frame.origin.y = grid.frame.origin.y + (CGFloat(i)*(caseToAdd.frame.height))
+                caseToAdd.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10 + (CGFloat(i)*(caseToAdd.frame.height))
                 caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
-                self.view.addSubview(caseToAdd)
+                backViewWhite.addSubview(caseToAdd)
                 // Penser à ajouter la case à la matrice de cases
                 matCase[i][j] = caseToAdd
             }
