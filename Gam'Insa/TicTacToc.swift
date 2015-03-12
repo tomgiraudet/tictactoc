@@ -54,12 +54,12 @@ class TicTacToc: GeneralView {
         popUpView.frame.origin.y = self.view.frame.height/2 - popUpView.frame.height/2
         popUpView.layer.cornerRadius = 10.0;
         
-        /*winLabel.sizeToFit()
+        winLabel.sizeToFit()
         winLabel.text = "Victoire !"
         winLabel.frame.origin.x = 0
         winLabel.frame.origin.y = 0
         winLabel.textColor = .blackColor()
-        popUpView.addSubview(winLabel)*/
+        popUpView.addSubview(winLabel)
         
         //Players
         player1 = Player()
@@ -146,13 +146,14 @@ class TicTacToc: GeneralView {
     }
     
     
-    func popUpWin(_playerName: String) {
+    /*func popUpWin(_playerName: String) {
         
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+        /*var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
         visualEffectView.frame = self.view.bounds
         self.view.addSubview(visualEffectView)
-    
-       /*popUpView.animateWithDuration(1.0, animations: {
+        
+
+       popUpView.animateWithDuration(1.0, animations: {
             self.popUpView.alpha = 1
         })*/
         println("coucou")
@@ -160,17 +161,17 @@ class TicTacToc: GeneralView {
         
         
         
-    }
+    }*/
     
     
-   /* func popUpWin(_playerName: String) {
+    func popUpWin(_playerName: String) {
         let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
             "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Revanche !",
                                                 style: UIAlertActionStyle.Default,
                                                 handler: {(alert: UIAlertAction!) in self.reset()}))
         self.presentViewController(alertController, animated: true, completion: nil)
-    }*/
+    }
     
     func popUpTie() {
         let alertController = UIAlertController(title: "Match nul!", message:
