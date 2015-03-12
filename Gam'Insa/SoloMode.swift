@@ -88,14 +88,15 @@ class SoloMode: TicTacToc {
             default: println("C'est dieu qui a gagné")
             }
             popUpWin(matrice.matrixGagnante().1)
-            reset()
+            //reset()
         }
         if matrice.matrixGagnante().0 == 2 {
             popUpTie()
-            reset()
+            //reset()
         }
         println("Fin du tour de l'IA")
     } // Fin fonction
+    
 }
 
 

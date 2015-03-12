@@ -32,11 +32,18 @@ class TicTacToc: GeneralView {
     let settingsButtonImg = UIImage(named: "settings.png")
     let resetButtonImg = UIImage(named: "reset.png")
     
+    let backPopUpView = UIView()
+    let popUpView = UIView()
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Pop up hidden
+        self.popUpView.hidden = true
+        self.backPopUpView.hidden = true
         
         //Players
         player1 = Player()
@@ -122,11 +129,33 @@ class TicTacToc: GeneralView {
     
     
     func popUpWin(_playerName: String) {
+        
+        //var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+        //visualEffectView.frame = self.view.bounds
+        //self.view.addSubview(visualEffectView)
+        
+        self.popUpView.sizeToFit()
+        self.popUpView.frame.origin.x = self.view.frame.width/2 - popUpView.frame.width/2
+        self.popUpView.frame.origin.y = self.view.frame.height/2 - popUpView.frame.height/2
+        self.popUpView.frame.size.width = self.view.frame.width - 40
+        self.popUpView.frame.size.height = self.view.frame.height * (30/100)
+        self.popUpView.layer.cornerRadius = 10.0;
+        
+        self.popUpView.hidden = false
+        self.view.addSubview(popUpView)
+        
+        
+    }
+    
+    
+   /* func popUpWin(_playerName: String) {
         let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
             "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Revanche !",
+                                                style: UIAlertActionStyle.Default,
+                                                handler: {(alert: UIAlertAction!) in self.reset()}))
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
+    }*/
     
     func popUpTie() {
         let alertController = UIAlertController(title: "Match nul!", message:
