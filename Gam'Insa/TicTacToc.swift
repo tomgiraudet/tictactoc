@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TicTacToc: UIViewController {
+class TicTacToc: GeneralView {
     
     var parent : ModeView!
     var settingsParent : SettingsView!
@@ -25,7 +25,6 @@ class TicTacToc: UIViewController {
     let grid = UIImageView(image: UIImage(named: "Grid.png"))
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
     let gameInfo = UILabel()
-    let background = UIImageView(image: UIImage(named: "background.png"))
     
     let settingsButton = UIButton()
     let resetButton = UIButton()
@@ -55,14 +54,8 @@ class TicTacToc: UIViewController {
         grid.frame.size.width = self.view.frame.size.width-20
         grid.frame.size.height = self.view.frame.size.width * (704/659)
         grid.frame.origin.x = 10
-        grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
-        
-        // GameInfo
-        gameInfo.frame = CGRectMake(10, titre.frame.origin.y+titre.frame.size.height, self.view.frame.width-20, 50)
-        gameInfo.text = "\(player1.name) - \(score1) vs \(score2) - \(player2.name)"
-        gameInfo.textAlignment = .Center
-        gameInfo.textColor = UIColor.blackColor()
-        //gameInfo.font = UIFont (name: "HelveticaNeue-UltraLight", size: 30)
+        grid.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10
+        //grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
         // TopButton
         settingsButton.frame = CGRectMake (5, 20, 25, 25)
@@ -73,10 +66,6 @@ class TicTacToc: UIViewController {
         resetButton.setImage(resetButtonImg, forState: .Normal)
         resetButton.addTarget(self, action: "reset", forControlEvents: .TouchUpInside)
         
-        //Background
-        background.frame.size.width = self.view.frame.size.width
-        background.frame.size.height = self.view.frame.size.height
-        
         // Matrice de Cases
         for column in 0...2 {
             var _case = Case()
@@ -86,10 +75,7 @@ class TicTacToc: UIViewController {
         // Initialisation
         matrice = Matrix()
         matrice.createMatrix()
-        self.view.addSubview(background)
-        //self.view.addSubview(titre)
-        self.view.addSubview(grid)
-        //self.view.addSubview(gameInfo)
+        backViewWhite.addSubview(grid)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
         initCases()
