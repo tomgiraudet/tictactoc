@@ -74,9 +74,9 @@ class TicTacToc: GeneralView {
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 20, titre.frame.size.width, titre.frame.size.height)
         
         // Grille
-        grid.frame.size.width = self.view.frame.size.width-20
+        grid.frame.size.width = backViewWhite.frame.size.width
         grid.frame.size.height = self.view.frame.size.width * (704/659)
-        grid.frame.origin.x = 10
+        grid.frame.origin.x = 0
         grid.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10
         //grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
         
@@ -120,7 +120,7 @@ class TicTacToc: GeneralView {
                 caseToAdd.frame.size.width = (grid.frame.size.width/3)-2
                 caseToAdd.frame.size.height = (grid.frame.size.height/3)-2
                 caseToAdd.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10 + (CGFloat(i)*(caseToAdd.frame.height))
-                caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+10)) + 2
+                caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+5))
                 backViewWhite.addSubview(caseToAdd)
                 // Penser à ajouter la case à la matrice de cases
                 matCase[i][j] = caseToAdd
