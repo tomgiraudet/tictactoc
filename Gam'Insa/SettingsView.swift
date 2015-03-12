@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingsView: ModeView {
+class SettingsView: GeneralView {
     
     var runningGame: TicTacToc!
     
@@ -26,30 +26,27 @@ class SettingsView: ModeView {
     let backButtonImg = UIImage(named: "back.png")
 
     override func viewDidLoad() {
-
-        var imageWidth = self.view.frame.size.width - ((15/100)*self.view.frame.size.width)
-        var proportion = ((settingsProfilImg?.size.height)!/(settingsProfilImg?.size.width)!)
+        
+        super.viewDidLoad()
+        
+        settingsProfil.sizeToFit()
+        var imageWidth = backViewWhite.frame.size.width - ((20/100)*backViewWhite.frame.size.width)
+        var proportion = ((settingsProfil.frame.size.height)/(settingsProfil.frame.size.width))
         var imageHeight = proportion*imageWidth
         
-        var space = (self.view.frame.size.height - titre.frame.origin.y + titre.frame.size.height - 4*(imageHeight))/5
+        var space = CGFloat(0)
         
-        var x = (self.view.frame.size.width-imageWidth)/2
-        var y = CGFloat(100) //+ space
         
-        //Titre
-        titre.sizeToFit()
-        titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 20, titre.frame.size.width, titre.frame.size.height)
+        var x = (backViewWhite.frame.size.width-imageWidth)/2
+        var y = CGFloat(space)
         
-        //Background
-        background.frame.size.width = self.view.frame.size.width
-        background.frame.size.height = self.view.frame.size.height
-        
-
+        println("imageWidth : \(imageWidth), proportion : \(proportion), imageHeight : \(imageHeight), x : \(x), y : \(y)")
+    
         // Button
         backButton.setImage(backButtonImg, forState: .Normal)
         backButton.frame = CGRectMake (5, 20, 25, 25)
         backButton.addTarget(self, action: "back", forControlEvents: .TouchUpInside)
-        
+        println("Backbutton ok")
         
         settingsProfil.setImage(settingsProfilImg, forState: .Normal)
         settingsProfil.sizeToFit()
@@ -57,23 +54,23 @@ class SettingsView: ModeView {
         settingsProfil.frame.origin.y = y
         settingsProfil.frame.size.height = imageHeight
         settingsProfil.frame.size.width = imageWidth
-        
+        println("settingsprofil ok")
         
         settingsCreerPartie.setImage(settingsCreerPartieImg, forState: .Normal)
         settingsCreerPartie.sizeToFit()
         settingsCreerPartie.frame.origin.x = x
-        settingsCreerPartie.frame.origin.y = y + imageHeight + (5/100)*imageHeight
+        settingsCreerPartie.frame.origin.y = y + imageHeight + space
         settingsCreerPartie.frame.size.height = imageHeight
         settingsCreerPartie.frame.size.width = imageWidth
-    
+        println("settingscreerpartie ok")
         
         settingsDuoMode.setImage(settingsDuoModeImg, forState: .Normal)
         settingsDuoMode.sizeToFit()
         settingsDuoMode.frame.origin.x = x
-        settingsDuoMode.frame.origin.y = y + 2*imageHeight + (10/100)*imageHeight
+        settingsDuoMode.frame.origin.y = y + 2*imageHeight + space
         settingsDuoMode.frame.size.height = imageHeight
         settingsDuoMode.frame.size.width = imageWidth
-        
+        println("settingsduomode ok")
         
         settingsQuitterPartie.setImage(settingsQuitterPartieImg, forState: .Normal)
         settingsQuitterPartie.sizeToFit()
@@ -82,16 +79,15 @@ class SettingsView: ModeView {
         settingsQuitterPartie.frame.size.height = imageHeight
         settingsQuitterPartie.frame.size.width = imageWidth
         settingsQuitterPartie.addTarget(self, action: "quitterPartie", forControlEvents: .TouchUpInside)
+        println("settingsquitterpartie ok")
         
         //Initialisation
-        self.view.addSubview(background)
-        //self.view.addSubview(titre)
         self.view.addSubview(backButton)
-        self.view.addSubview(settingsProfil)
-        self.view.addSubview(settingsCreerPartie)
-        self.view.addSubview(settingsDuoMode)
-        self.view.addSubview(settingsQuitterPartie)
-        
+        backViewWhite.addSubview(settingsProfil)
+        backViewWhite.addSubview(settingsCreerPartie)
+        backViewWhite.addSubview(settingsDuoMode)
+        backViewWhite.addSubview(settingsQuitterPartie)
+
     }
     
     override func didReceiveMemoryWarning() {

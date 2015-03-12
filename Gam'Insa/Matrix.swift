@@ -184,7 +184,7 @@ class Matrix:NSObject{
     }
     
     func mediumGame() -> (Int, Int) {
-        return (1,1)
+        return (1, 1)
     }
     
     func hardGame() -> (Int, Int) {

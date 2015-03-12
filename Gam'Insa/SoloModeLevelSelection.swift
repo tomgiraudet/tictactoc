@@ -9,12 +9,11 @@
 import Foundation
 import UIKit
 
-class SoloModeLevelSelection: UIViewController{
+class SoloModeLevelSelection: GeneralView{
     
     var parent : UIViewController!
     
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
-    let background = UIImageView(image: UIImage(named: "background.png"))
     
     let backButtonImg = UIImage(named: "back.png")
     let backButton = UIButton()
@@ -25,6 +24,9 @@ class SoloModeLevelSelection: UIViewController{
     let goButtonImg = UIImage(named: "launch_game.png")
     
     override func viewDidLoad() {
+        
+        // permet de charger le design de GeneralView
+        super.viewDidLoad()
         
         var imageWidth = self.view.frame.size.width - ((20/100)*self.view.frame.size.width)
         var imageHeight = self.view.frame.size.height * (15/100)
@@ -38,39 +40,33 @@ class SoloModeLevelSelection: UIViewController{
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 40, titre.frame.size.width, titre.frame.size.height)
         
-        //Background
-        background.frame.size.width = self.view.frame.size.width
-        background.frame.size.height = self.view.frame.size.height
-        
         // Back Button
         backButton.setImage(backButtonImg, forState: .Normal)
-        backButton.frame = CGRectMake (5, 20, 25, 25)
+        backButton.frame = CGRectMake (5, entete.frame.origin.y, 25, 25)
         backButton.addTarget(self, action: "back", forControlEvents: .TouchUpInside)
         
         // Slider
         slider.maximumValue = 3
         slider.minimumValue = 1
         slider.sizeToFit()
-        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 110, slider.frame.size.width, slider.frame.size.height)
+        slider.frame = CGRectMake((self.view.frame.size.width - slider.frame.size.width)/2, titre.frame.origin.y + titre.frame.size.height + 100, slider.frame.size.width, slider.frame.size.height)
         slider.addTarget(self, action: "sliderValueChanged:", forControlEvents: UIControlEvents.ValueChanged)
         
         // Go Button
         goButton.setImage(goButtonImg, forState: .Normal)
         goButton.sizeToFit()
         goButton.frame.origin.x = x
-        goButton.frame.origin.y = self.view.frame.height - 2*imageHeight
+        goButton.frame.origin.y = backViewWhite.frame.height - 2*imageHeight
         goButton.frame.size.width = imageWidth
         goButton.frame.size.height = imageHeight
         goButton.addTarget(self, action: "goGame", forControlEvents: .TouchUpInside)
         
         
         //Initialisation
-        self.view.addSubview(background)
-        //self.view.addSubview(titre)
         self.view.addSubview(backButton)
-        self.view.addSubview(slider)
-        self.view.addSubview(levelLabel)
-        self.view.addSubview(goButton)
+        backViewWhite.addSubview(slider)
+        backViewWhite.addSubview(levelLabel)
+        backViewWhite.addSubview(goButton)
         
         
         

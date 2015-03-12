@@ -10,18 +10,14 @@ import Foundation
 import UIKit
 
 
-class ModeView: UIViewController {
+class ModeView: GeneralView {
     
     var parent : UIViewController!
     
     let titre = UIImageView(image: UIImage(named: "Titre.png"))
-    let background = UIImageView(image: UIImage(named: "background.png"))
-    let modeInfo = UILabel()
-    
     let soloMode = UIButton()
     let duoMode = UIButton()
     let multiMode = UIButton()
-    
     let soloImage = UIImageView(image: UIImage(named: "solo.png"))
     let duoImage = UIImageView(image: UIImage(named: "duo.png"))
     let multiImage = UIImageView(image: UIImage(named: "multijoueur.png"))
@@ -29,36 +25,26 @@ class ModeView: UIViewController {
     
     override func viewDidLoad() {
         
-        var imageWidth = self.view.frame.size.width - ((20/100)*self.view.frame.size.width)
+        super.viewDidLoad()
+        
+        var imageWidth = backViewWhite.frame.size.width - ((20/100)*backViewWhite.frame.size.width)
         var proportion = ((soloImage.frame.size.height)/(soloImage.frame.size.width))
         var imageHeight = proportion*imageWidth
     
         
-        var space = (self.view.frame.size.height - modeInfo.frame.origin.y + modeInfo.frame.size.height - 3*(imageHeight))/4
+        var space = 60 + choisis_ton_mode_de_jeu.frame.size.height
         
         
-        var x = (self.view.frame.size.width-imageWidth)/2
-        var y = 100 + modeInfo.frame.origin.y + modeInfo.frame.size.height + modeInfo.frame.size.height + space
+        var x = (backViewWhite.frame.size.width-imageWidth)/2
+        var y = choisis_ton_mode_de_jeu.frame.origin.y + space
 
         
         
-        //Background
-        background.frame.size.width = self.view.frame.size.width
-        background.frame.size.height = self.view.frame.size.height
-    
-        /*
-        // ModeInfo
-        modeInfo.frame = CGRectMake(10, 100, self.view.frame.width-20, 50)
-        modeInfo.text = "Choisis ton mode de jeu !"
-        modeInfo.textAlignment = .Center
-        modeInfo.textColor = UIColor.blackColor()
-        */
-        
         // Selection mode de jeu 
         choisis_ton_mode_de_jeu.sizeToFit()
-        choisis_ton_mode_de_jeu.frame.size.width = self.view.frame.size.width * (80/100)
-        choisis_ton_mode_de_jeu.frame.origin.x = (self.view.frame.size.width-choisis_ton_mode_de_jeu.frame.size.width)/2
-        choisis_ton_mode_de_jeu.frame.origin.y = self.view.frame.size.height * (10/100)
+        choisis_ton_mode_de_jeu.frame.size.width = backViewWhite.frame.size.width * (80/100)
+        choisis_ton_mode_de_jeu.frame.origin.x = (backViewWhite.frame.size.width-choisis_ton_mode_de_jeu.frame.size.width)/2
+        choisis_ton_mode_de_jeu.frame.origin.y = 20
     
         
         //SoloIcon
@@ -89,12 +75,10 @@ class ModeView: UIViewController {
         
         
         //Initialisation
-        self.view.addSubview(background)
-        //self.view.addSubview(titre)
-        self.view.addSubview(choisis_ton_mode_de_jeu)
-        self.view.addSubview(soloMode)
-        self.view.addSubview(duoMode)
-        self.view.addSubview(multiMode)
+        backViewWhite.addSubview(choisis_ton_mode_de_jeu)
+        backViewWhite.addSubview(soloMode)
+        backViewWhite.addSubview(duoMode)
+        backViewWhite.addSubview(multiMode)
         
     }
 
