@@ -18,6 +18,8 @@ class GeneralView: UIViewController{
     var whiteColor = UIColor.whiteColor()
     var greyColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)
     var entete = UILabel()
+    
+    var cornerRadius = CGFloat(10)
 
     
     
@@ -36,11 +38,11 @@ class GeneralView: UIViewController{
         
         backViewGrey.backgroundColor = greyColor
         backViewGrey.frame = CGRect(x: 5, y: 65, width: self.view.frame.size.width-10, height: self.view.frame.size.height-70)
-        backViewGrey.layer.cornerRadius = 10
+        backViewGrey.layer.cornerRadius = self.cornerRadius
         
         backViewWhite.backgroundColor = .whiteColor()
         backViewWhite.frame = CGRect(x:2, y:2, width: backViewGrey.frame.size.width-4, height: backViewGrey.frame.size.height-4)
-        backViewWhite.layer.cornerRadius = 10
+        backViewWhite.layer.cornerRadius = self.cornerRadius
         
         // Initialisation
         self.view.addSubview(entete)
