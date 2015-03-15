@@ -54,7 +54,6 @@ class Case: UIView {
     }
     
     func touchedCase(_caseJouee: Case) {
-        println("case touched")
         self.papa?.caseJouee(self)
     }
     

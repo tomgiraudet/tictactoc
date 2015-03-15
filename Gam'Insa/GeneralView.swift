@@ -38,7 +38,7 @@ class GeneralView: UIViewController{
         backViewGrey.frame = CGRect(x: 5, y: 65, width: self.view.frame.size.width-10, height: self.view.frame.size.height-70)
         backViewGrey.layer.cornerRadius = 10
         
-        backViewWhite.backgroundColor = whiteColor
+        backViewWhite.backgroundColor = .whiteColor()
         backViewWhite.frame = CGRect(x:2, y:2, width: backViewGrey.frame.size.width-4, height: backViewGrey.frame.size.height-4)
         backViewWhite.layer.cornerRadius = 10
         

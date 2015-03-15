@@ -33,10 +33,10 @@ class TicTacToc: GeneralView {
     let resetButtonImg = UIImage(named: "reset.png")
     
     // Pop up
-    let backPopUpView = UIView()
+    /*let backPopUpView = UIView()
     let popUpView = UIView()
     let winLabel = UILabel()
-    let tieLabel = UILabel()
+    let tieLabel = UILabel()*/
     
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class TicTacToc: GeneralView {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Win pop up
-        popUpView.alpha = 0
+        /*popUpView.alpha = 0
         popUpView.sizeToFit()
         popUpView.backgroundColor = .grayColor()
         popUpView.frame.size.width = self.view.frame.width - 40
@@ -59,7 +59,7 @@ class TicTacToc: GeneralView {
         winLabel.frame.origin.x = 0
         winLabel.frame.origin.y = 0
         winLabel.textColor = .blackColor()
-        popUpView.addSubview(winLabel)
+        popUpView.addSubview(winLabel) */
         
         //Players
         player1 = Player()
@@ -101,8 +101,8 @@ class TicTacToc: GeneralView {
         backViewWhite.addSubview(grid)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
-        self.view.addSubview(popUpView)
-        popUpView.addSubview(winLabel)
+        //self.backViewWhite.addSubview(popUpView)
+        //popUpView.addSubview(winLabel)
         initCases()
     }
     
