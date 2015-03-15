@@ -134,7 +134,7 @@ class TicTacToc: GeneralView {
     
     
     func reset(){
-        viewDidLoad()
+        self.viewDidLoad()
     }
     
     func settings(){
@@ -171,6 +171,7 @@ class TicTacToc: GeneralView {
                                                 style: UIAlertActionStyle.Default,
                                                 handler: {(alert: UIAlertAction!) in self.reset()}))
         self.presentViewController(alertController, animated: true, completion: nil)
+        reset()
     }
     
     func popUpTie() {
@@ -178,6 +179,7 @@ class TicTacToc: GeneralView {
             "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
+        reset()
     }
     
 
