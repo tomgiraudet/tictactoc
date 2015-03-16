@@ -31,14 +31,15 @@ class SettingsView: GeneralView {
         
         settingsProfil.sizeToFit()
         var imageWidth = backViewWhite.frame.size.width - ((20/100)*backViewWhite.frame.size.width)
-        var proportion = ((settingsProfil.frame.size.height)/(settingsProfil.frame.size.width))
+        println("height : \(settingsProfil.frame.size.height) width : \(settingsProfil.frame.size.width)")
+        var proportion = ((settingsProfilImg?.size.height)!/(settingsProfilImg?.size.width)!)
         var imageHeight = proportion*imageWidth
         
-        var space = CGFloat(0)
+        var space = (self.backViewWhite.frame.size.height - 4*imageHeight)/9
         
         
         var x = (backViewWhite.frame.size.width-imageWidth)/2
-        var y = CGFloat(space)
+        var y = 2*space
         
         println("imageWidth : \(imageWidth), proportion : \(proportion), imageHeight : \(imageHeight), x : \(x), y : \(y)")
     
@@ -46,7 +47,6 @@ class SettingsView: GeneralView {
         backButton.setImage(backButtonImg, forState: .Normal)
         backButton.frame = CGRectMake (5, 20, 25, 25)
         backButton.addTarget(self, action: "back", forControlEvents: .TouchUpInside)
-        println("Backbutton ok")
         
         settingsProfil.setImage(settingsProfilImg, forState: .Normal)
         settingsProfil.sizeToFit()
@@ -54,7 +54,6 @@ class SettingsView: GeneralView {
         settingsProfil.frame.origin.y = y
         settingsProfil.frame.size.height = imageHeight
         settingsProfil.frame.size.width = imageWidth
-        println("settingsprofil ok")
         
         settingsCreerPartie.setImage(settingsCreerPartieImg, forState: .Normal)
         settingsCreerPartie.sizeToFit()
@@ -62,24 +61,21 @@ class SettingsView: GeneralView {
         settingsCreerPartie.frame.origin.y = y + imageHeight + space
         settingsCreerPartie.frame.size.height = imageHeight
         settingsCreerPartie.frame.size.width = imageWidth
-        println("settingscreerpartie ok")
         
         settingsDuoMode.setImage(settingsDuoModeImg, forState: .Normal)
         settingsDuoMode.sizeToFit()
         settingsDuoMode.frame.origin.x = x
-        settingsDuoMode.frame.origin.y = y + 2*imageHeight + space
+        settingsDuoMode.frame.origin.y = y + 2*imageHeight + 2*space
         settingsDuoMode.frame.size.height = imageHeight
         settingsDuoMode.frame.size.width = imageWidth
-        println("settingsduomode ok")
         
         settingsQuitterPartie.setImage(settingsQuitterPartieImg, forState: .Normal)
         settingsQuitterPartie.sizeToFit()
         settingsQuitterPartie.frame.origin.x = x
-        settingsQuitterPartie.frame.origin.y = y + 3*imageHeight + (15/100)*imageHeight
+        settingsQuitterPartie.frame.origin.y = y + 3*imageHeight + 3*space
         settingsQuitterPartie.frame.size.height = imageHeight
         settingsQuitterPartie.frame.size.width = imageWidth
         settingsQuitterPartie.addTarget(self, action: "quitterPartie", forControlEvents: .TouchUpInside)
-        println("settingsquitterpartie ok")
         
         //Initialisation
         self.view.addSubview(backButton)

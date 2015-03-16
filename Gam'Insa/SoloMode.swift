@@ -51,7 +51,7 @@ class SoloMode: TicTacToc {
             }else{
                 println("Fin du coup du joueur réel")
                 // Fin du coup du joueur, au tour de l'IA de jouer
-                let delay = 0.5 * Double(NSEC_PER_SEC)
+                let delay = 0.4 * Double(NSEC_PER_SEC)
                 let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                 dispatch_after(time, dispatch_get_main_queue()){
                     self.timeToMakeGodPlayTicTacToc()
@@ -65,7 +65,6 @@ class SoloMode: TicTacToc {
         // Définition de la case à jouer :
         var whereToPlay: (iToPlay: Int,jToPlay: Int)
         whereToPlay = (-1,-1)
-        println("Début du coup de l'IA, level : \(level)")
         switch self.level {
         case 1: whereToPlay = matrice.easyGame(matCase)
         case 2: whereToPlay = matrice.mediumGame()
@@ -74,7 +73,6 @@ class SoloMode: TicTacToc {
         }
         
         var _caseJoueeParIA = self.matCase[whereToPlay.0][whereToPlay.1]
-        println("Case IA : \(whereToPlay.0);\(whereToPlay.1)")
         // Gestion de l'affichage
         _caseJoueeParIA.setPlayer(_caseJoueeParIA.papa!.player2)
         _caseJoueeParIA.placeCase(_caseJoueeParIA.papa!.player2)
