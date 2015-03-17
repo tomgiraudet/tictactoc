@@ -44,22 +44,6 @@ class TicTacToc: GeneralView {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Win pop up
-        /*popUpView.alpha = 0
-        popUpView.sizeToFit()
-        popUpView.backgroundColor = .grayColor()
-        popUpView.frame.size.width = self.view.frame.width - 40
-        popUpView.frame.size.height = self.view.frame.height * (30/100)
-        popUpView.frame.origin.x = 20
-        popUpView.frame.origin.y = self.view.frame.height/2 - popUpView.frame.height/2
-        popUpView.layer.cornerRadius = 10.0;
-        
-        winLabel.sizeToFit()
-        winLabel.text = "Victoire !"
-        winLabel.frame.origin.x = 0
-        winLabel.frame.origin.y = 0
-        winLabel.textColor = .blackColor()
-        popUpView.addSubview(winLabel) */
         
         //Players
         player1 = Player()
@@ -67,6 +51,45 @@ class TicTacToc: GeneralView {
         player2 = Player()
         player2.createPlayer("Tom", img:"O_black.png")
         currentPlayer = player1
+        
+        
+        var imageViewPlayer1 = UIImageView(image: player1.profilPic.image)
+        imageViewPlayer1.frame = CGRectMake(10, 10, 80, 80)
+        imageViewPlayer1.layer.masksToBounds = true
+        imageViewPlayer1.layer.cornerRadius = 40
+//        imageViewPlayer1.layer.borderColor = UIColor.blackColor().CGColor
+  //      imageViewPlayer1.layer.borderWidth = 2
+        
+        var scoreLabelPlayer1 = UILabel()
+        scoreLabelPlayer1.text = "2"
+        scoreLabelPlayer1.textAlignment = .Center
+        scoreLabelPlayer1.textColor = .whiteColor()
+        scoreLabelPlayer1.frame = CGRectMake(65, 65, 30, 30)
+        scoreLabelPlayer1.layer.cornerRadius = scoreLabelPlayer1.frame.size.height/2
+        scoreLabelPlayer1.backgroundColor = generalColor
+        scoreLabelPlayer1.layer.borderColor = UIColor.whiteColor().CGColor
+        scoreLabelPlayer1.layer.masksToBounds = true
+        scoreLabelPlayer1.layer.borderWidth = 2
+        
+        // Affichage des views player
+        /*var sideSizeProfilPic = CGFloat(50)
+        
+        var profilPicPlayer1View = UIView()
+        var profilPicPlayer2View = UIView()
+        profilPicPlayer1View.addSubview(player1.profilPic)
+        profilPicPlayer2View.addSubview(player2.profilPic)
+        profilPicPlayer1View.frame.size.height = sideSizeProfilPic
+        profilPicPlayer1View.frame.size.width = sideSizeProfilPic
+        profilPicPlayer2View.frame.size.height = sideSizeProfilPic
+        profilPicPlayer2View.frame.size.width = sideSizeProfilPic
+        
+        profilPicPlayer1View.layer.cornerRadius = sideSizeProfilPic/2*/
+        
+        
+        
+        
+        
+        
 
         
         // Titre
@@ -99,10 +122,12 @@ class TicTacToc: GeneralView {
         matrice = Matrix()
         matrice.createMatrix()
         backViewWhite.addSubview(grid)
+        backViewWhite.addSubview(imageViewPlayer1)
+        backViewWhite.addSubview(scoreLabelPlayer1)
+//        backViewWhite.addSubview(profilPicPlayer1View)
+  //      backViewWhite.addSubview(profilPicPlayer2View)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
-        //self.backViewWhite.addSubview(popUpView)
-        //popUpView.addSubview(winLabel)
         initCases()
     }
     
