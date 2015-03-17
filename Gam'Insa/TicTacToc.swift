@@ -53,15 +53,14 @@ class TicTacToc: GeneralView {
         currentPlayer = player1
         
         
-        var imageViewPlayer1 = UIImageView(image: player1.profilPic.image)
+        var imageViewPlayer1 = UIImageView(image: player1.profilPic)
         imageViewPlayer1.frame = CGRectMake(10, 10, 80, 80)
         imageViewPlayer1.layer.masksToBounds = true
         imageViewPlayer1.layer.cornerRadius = 40
-//        imageViewPlayer1.layer.borderColor = UIColor.blackColor().CGColor
-  //      imageViewPlayer1.layer.borderWidth = 2
+
         
         var scoreLabelPlayer1 = UILabel()
-        scoreLabelPlayer1.text = "2"
+        scoreLabelPlayer1.text = "\(player1.score)"
         scoreLabelPlayer1.textAlignment = .Center
         scoreLabelPlayer1.textColor = .whiteColor()
         scoreLabelPlayer1.frame = CGRectMake(65, 65, 30, 30)
@@ -70,27 +69,6 @@ class TicTacToc: GeneralView {
         scoreLabelPlayer1.layer.borderColor = UIColor.whiteColor().CGColor
         scoreLabelPlayer1.layer.masksToBounds = true
         scoreLabelPlayer1.layer.borderWidth = 2
-        
-        // Affichage des views player
-        /*var sideSizeProfilPic = CGFloat(50)
-        
-        var profilPicPlayer1View = UIView()
-        var profilPicPlayer2View = UIView()
-        profilPicPlayer1View.addSubview(player1.profilPic)
-        profilPicPlayer2View.addSubview(player2.profilPic)
-        profilPicPlayer1View.frame.size.height = sideSizeProfilPic
-        profilPicPlayer1View.frame.size.width = sideSizeProfilPic
-        profilPicPlayer2View.frame.size.height = sideSizeProfilPic
-        profilPicPlayer2View.frame.size.width = sideSizeProfilPic
-        
-        profilPicPlayer1View.layer.cornerRadius = sideSizeProfilPic/2*/
-        
-        
-        
-        
-        
-        
-
         
         // Titre
         titre.sizeToFit()
