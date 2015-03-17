@@ -100,7 +100,7 @@ class ModeView: GeneralView {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.parent = self
-        vc.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
         
     }
