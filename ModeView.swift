@@ -67,12 +67,12 @@ class ModeView: GeneralView {
         
         //MultiIcon
         multiMode.setImage(UIImage (named: "multijoueur.png"), forState: .Normal)
+        multiMode.addTarget(self, action: "goMultiMode", forControlEvents: .TouchUpInside)
         multiMode.sizeToFit()
         multiMode.frame.origin.x = x
         multiMode.frame.origin.y = y + 2*imageHeight + (30/100)*imageHeight
         multiMode.frame.size.height = imageHeight
         multiMode.frame.size.width = imageWidth
-        
         
         //Initialisation
         backViewWhite.addSubview(choisis_ton_mode_de_jeu)
@@ -100,7 +100,16 @@ class ModeView: GeneralView {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = mainStoryboard.instantiateViewControllerWithIdentifier("DuoID") as DuoMode
         vc.parent = self
-        vc.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+    }
+    
+    func goMultiMode() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let vc = mainStoryboard.instantiateViewControllerWithIdentifier("MultiID") as MultiModeHome
+        vc.parent = self
+        vc.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(vc, animated: true, completion: nil)
         
     }

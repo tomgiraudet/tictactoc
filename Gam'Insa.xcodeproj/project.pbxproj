@@ -27,6 +27,16 @@
 		2C5C30191AAE28E500E5792C /* icon_40px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30151AAE28E500E5792C /* icon_40px.png */; };
 		2C5C301A1AAE28E500E5792C /* icon_60px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30161AAE28E500E5792C /* icon_60px.png */; };
 		2C5C301B1AAE28E500E5792C /* icon_full_size.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C5C30171AAE28E500E5792C /* icon_full_size.png */; };
+		2C7E12AB1AB88F5000D757D2 /* MutliModeHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12AA1AB88F5000D757D2 /* MutliModeHome.swift */; };
+		2C7E12B61AB89B4600D757D2 /* SocketAckHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12AD1AB89B4600D757D2 /* SocketAckHandler.swift */; };
+		2C7E12B71AB89B4600D757D2 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12AE1AB89B4600D757D2 /* SocketEngine.swift */; };
+		2C7E12B81AB89B4600D757D2 /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12AF1AB89B4600D757D2 /* SocketEvent.swift */; };
+		2C7E12B91AB89B4600D757D2 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B01AB89B4600D757D2 /* SocketEventHandler.swift */; };
+		2C7E12BA1AB89B4600D757D2 /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B11AB89B4600D757D2 /* SocketFixUTF8.swift */; };
+		2C7E12BB1AB89B4600D757D2 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B21AB89B4600D757D2 /* SocketIOClient.swift */; };
+		2C7E12BC1AB89B4600D757D2 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B31AB89B4600D757D2 /* SocketParser.swift */; };
+		2C7E12BD1AB89B4600D757D2 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B41AB89B4600D757D2 /* SwiftRegex.swift */; };
+		2C7E12BE1AB89B4600D757D2 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B51AB89B4600D757D2 /* WebSocket.swift */; };
 		2CA715BF1AAE2B1C00148351 /* icon_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BA1AAE2B1C00148351 /* icon_58px.png */; };
 		2CA715C01AAE2B1C00148351 /* icon_80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BB1AAE2B1C00148351 /* icon_80px.png */; };
 		2CA715C11AAE2B1C00148351 /* icon_87px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BC1AAE2B1C00148351 /* icon_87px.png */; };
@@ -88,6 +98,16 @@
 		2C5C30151AAE28E500E5792C /* icon_40px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_40px.png; sourceTree = "<group>"; };
 		2C5C30161AAE28E500E5792C /* icon_60px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_60px.png; sourceTree = "<group>"; };
 		2C5C30171AAE28E500E5792C /* icon_full_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_full_size.png; sourceTree = "<group>"; };
+		2C7E12AA1AB88F5000D757D2 /* MutliModeHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutliModeHome.swift; sourceTree = "<group>"; };
+		2C7E12AD1AB89B4600D757D2 /* SocketAckHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckHandler.swift; sourceTree = "<group>"; };
+		2C7E12AE1AB89B4600D757D2 /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngine.swift; sourceTree = "<group>"; };
+		2C7E12AF1AB89B4600D757D2 /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
+		2C7E12B01AB89B4600D757D2 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		2C7E12B11AB89B4600D757D2 /* SocketFixUTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketFixUTF8.swift; sourceTree = "<group>"; };
+		2C7E12B21AB89B4600D757D2 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		2C7E12B31AB89B4600D757D2 /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParser.swift; sourceTree = "<group>"; };
+		2C7E12B41AB89B4600D757D2 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		2C7E12B51AB89B4600D757D2 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		2CA715BA1AAE2B1C00148351 /* icon_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58px.png; sourceTree = "<group>"; };
 		2CA715BB1AAE2B1C00148351 /* icon_80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80px.png; sourceTree = "<group>"; };
 		2CA715BC1AAE2B1C00148351 /* icon_87px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_87px.png; sourceTree = "<group>"; };
@@ -140,6 +160,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C7E12AC1AB89B4600D757D2 /* SwiftIO */ = {
+			isa = PBXGroup;
+			children = (
+				2C7E12AD1AB89B4600D757D2 /* SocketAckHandler.swift */,
+				2C7E12AE1AB89B4600D757D2 /* SocketEngine.swift */,
+				2C7E12AF1AB89B4600D757D2 /* SocketEvent.swift */,
+				2C7E12B01AB89B4600D757D2 /* SocketEventHandler.swift */,
+				2C7E12B11AB89B4600D757D2 /* SocketFixUTF8.swift */,
+				2C7E12B21AB89B4600D757D2 /* SocketIOClient.swift */,
+				2C7E12B31AB89B4600D757D2 /* SocketParser.swift */,
+				2C7E12B41AB89B4600D757D2 /* SwiftRegex.swift */,
+				2C7E12B51AB89B4600D757D2 /* WebSocket.swift */,
+			);
+			path = SwiftIO;
+			sourceTree = "<group>";
+		};
 		2CEC22951AA5F557003C46E2 = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +209,11 @@
 				2C132C091AADA7BF001BCBD3 /* SoloMode.swift */,
 				2C132C0B1AADAE2C001BCBD3 /* SoloModeLevelSelection.swift */,
 				2CEC22A81AA5F557003C46E2 /* DuoMode.swift */,
+				2C7E12AA1AB88F5000D757D2 /* MutliModeHome.swift */,
 				2C5B63D61AAC961D00CE463D /* SettingsView.swift */,
 				2C5B63DE1AACA28600CE463D /* SettingsDuoView.swift */,
 				2CEC22AA1AA5F557003C46E2 /* Main.storyboard */,
+				2C7E12AC1AB89B4600D757D2 /* SwiftIO */,
 				2CEC22C61AA5FF12003C46E2 /* img */,
 				2CEC22AD1AA5F557003C46E2 /* Images.xcassets */,
 				2CEC22AF1AA5F557003C46E2 /* LaunchScreen.xib */,
@@ -377,17 +415,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEC22A91AA5F557003C46E2 /* DuoMode.swift in Sources */,
+				2C7E12BE1AB89B4600D757D2 /* WebSocket.swift in Sources */,
+				2C7E12BA1AB89B4600D757D2 /* SocketFixUTF8.swift in Sources */,
 				2C5B63D71AAC961D00CE463D /* SettingsView.swift in Sources */,
 				2CEC22D71AA64550003C46E2 /* Case.swift in Sources */,
 				2C132C0C1AADAE2C001BCBD3 /* SoloModeLevelSelection.swift in Sources */,
 				2C132C0A1AADA7BF001BCBD3 /* SoloMode.swift in Sources */,
 				811E74591AA8E2D60056DC43 /* Matrix.swift in Sources */,
 				2C132C081AADA0A4001BCBD3 /* TicTacToc.swift in Sources */,
+				2C7E12B91AB89B4600D757D2 /* SocketEventHandler.swift in Sources */,
+				2C7E12B71AB89B4600D757D2 /* SocketEngine.swift in Sources */,
+				2C7E12B61AB89B4600D757D2 /* SocketAckHandler.swift in Sources */,
+				2C7E12BC1AB89B4600D757D2 /* SocketParser.swift in Sources */,
+				2C7E12BD1AB89B4600D757D2 /* SwiftRegex.swift in Sources */,
 				2C245F531AB20A0B00DC9160 /* GeneralView.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
 				2C245F511AB2058B00DC9160 /* MultiModeHome.swift in Sources */,
 				2CEC22D81AA64550003C46E2 /* Player.swift in Sources */,
+				2C7E12B81AB89B4600D757D2 /* SocketEvent.swift in Sources */,
+				2C7E12AB1AB88F5000D757D2 /* MutliModeHome.swift in Sources */,
 				81B7EEBA1AAB9BCC008611DA /* ModeView.swift in Sources */,
+				2C7E12BB1AB89B4600D757D2 /* SocketIOClient.swift in Sources */,
 				2C5B63DF1AACA28600CE463D /* SettingsDuoView.swift in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
 			);
