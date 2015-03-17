@@ -38,8 +38,8 @@ class SoloMode: TicTacToc {
         matrice.addCase(_caseJouee.i, j: _caseJouee.j, _player: player1)
         if matrice.matrixGagnante().0 == 1 {
             switch matrice.matrixGagnante().1{
-            case player1.name: score1++
-            case player2.name: score2++
+            case player1.name: player1.score++ 
+            case player2.name: (player2.score)++
             default: println("C'est dieu qui a gagné")
             }
             popUpWin(matrice.matrixGagnante().1)
@@ -81,8 +81,8 @@ class SoloMode: TicTacToc {
         matrice.addCase(whereToPlay.0,j: whereToPlay.1,_player: player2)
         if matrice.matrixGagnante().0 == 1 {
             switch matrice.matrixGagnante().1{
-            case player1.name: score1++
-            case player2.name: score2++
+            case player1.name: player1.score++
+            case player2.name: player2.score++
             default: println("C'est dieu qui a gagné")
             }
             popUpWin(matrice.matrixGagnante().1)

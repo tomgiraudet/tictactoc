@@ -16,8 +16,6 @@ class TicTacToc: GeneralView {
     
     var player1:Player!
     var player2:Player!
-    var score1: Int = 0
-    var score2: Int = 0
     var currentPlayer:Player!
     var matrice:Matrix!
     var matCase = Array<Array<Case>>()
@@ -38,6 +36,8 @@ class TicTacToc: GeneralView {
     let winLabel = UILabel()
     let tieLabel = UILabel()*/
     
+    var scoreLabelPlayer2 = UILabel()
+    var scoreLabelPlayer1 = UILabel()
     
     override func viewDidLoad() {
         
@@ -74,8 +74,8 @@ class TicTacToc: GeneralView {
         imageViewPlayer1.layer.borderColor = greyColor.CGColor
         imageViewPlayer1.layer.borderWidth = 2
         
-        var scoreLabelPlayer1 = UILabel()
-        scoreLabelPlayer1.text = "\(player1.score)"
+        //var scoreLabelPlayer1 = UILabel()
+        //scoreLabelPlayer1.text = "\(player1.score)"
         scoreLabelPlayer1.textAlignment = .Center
         scoreLabelPlayer1.textColor = .whiteColor()
         var sizeScore = CGFloat(30)
@@ -96,8 +96,8 @@ class TicTacToc: GeneralView {
         imageViewPlayer2.layer.borderColor = greyColor.CGColor
         imageViewPlayer2.layer.borderWidth = 2
         
-        var scoreLabelPlayer2 = UILabel()
-        scoreLabelPlayer2.text = "\(player2.score)"
+        //var scoreLabelPlayer2 = UILabel()
+        //scoreLabelPlayer2.text = "\(player2.score)"
         scoreLabelPlayer2.textAlignment = .Center
         scoreLabelPlayer2.textColor = .whiteColor()
         var xScore2 = backViewWhite.frame.size.width - (profilPicSize*(1/2 + sqrt(2)/4))
@@ -133,6 +133,8 @@ class TicTacToc: GeneralView {
         backViewWhite.addSubview(scoreLabelPlayer2)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
+        
+        
         initCases()
     }
     
@@ -158,13 +160,18 @@ class TicTacToc: GeneralView {
         }
     }
     
+    
     func caseJouee(_caseJouee: Case){
         // Le corps de la fonction se trouve dans les sous-classes
     }
     
     
     func reset(){
+        scoreLabelPlayer1.text = "\(player1.score)"
+        scoreLabelPlayer2.text = "\(player2.score)"
         self.viewDidLoad()
+        //self.scoreLabelPlayer1.setNeedsDisplay()
+        //self.scoreLabelPlayer2.setNeedsDisplay()
     }
     
     func settings(){
@@ -187,26 +194,23 @@ class TicTacToc: GeneralView {
             self.popUpView.alpha = 1
         })*/
         println("coucou")
-        
-        
-        
-        
     }*/
     
     
     func popUpWin(_playerName: String) {
         let alertController = UIAlertController(title: "Victoire de \(_playerName) !", message:
-            "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
+            "\(player1.name) : \(player1.score) - \(player2.name) : \(player2.score) ", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Revanche !",
                                                 style: UIAlertActionStyle.Default,
                                                 handler: {(alert: UIAlertAction!) in self.reset()}))
         self.presentViewController(alertController, animated: true, completion: nil)
         reset()
+        
     }
     
     func popUpTie() {
         let alertController = UIAlertController(title: "Match nul!", message:
-            "\(player1.name) : \(score1) - \(player2.name) : \(score2) ", preferredStyle: UIAlertControllerStyle.Alert)
+            "\(player1.name) : \(player1.score) - \(player2.name) : \(player2.score) ", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Revanche !", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
         reset()

@@ -15,7 +15,7 @@ class Player:NSObject{
 
     var name:String!
     var icon:UIImage!
-    var score:Int!
+    var score: UInt8 = 0
     var profilPic: UIImage!
     
     func createPlayer (name:String, img:String){
