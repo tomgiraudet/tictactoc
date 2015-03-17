@@ -52,46 +52,6 @@ class TicTacToc: GeneralView {
         player2.createPlayer("Tom", img:"O_black.png")
         currentPlayer = player1
         
-        
-        var imageViewPlayer1 = UIImageView(image: player1.profilPic.image)
-        imageViewPlayer1.frame = CGRectMake(10, 10, 80, 80)
-        imageViewPlayer1.layer.masksToBounds = true
-        imageViewPlayer1.layer.cornerRadius = 40
-//        imageViewPlayer1.layer.borderColor = UIColor.blackColor().CGColor
-  //      imageViewPlayer1.layer.borderWidth = 2
-        
-        var scoreLabelPlayer1 = UILabel()
-        scoreLabelPlayer1.text = "2"
-        scoreLabelPlayer1.textAlignment = .Center
-        scoreLabelPlayer1.textColor = .whiteColor()
-        scoreLabelPlayer1.frame = CGRectMake(65, 65, 30, 30)
-        scoreLabelPlayer1.layer.cornerRadius = scoreLabelPlayer1.frame.size.height/2
-        scoreLabelPlayer1.backgroundColor = generalColor
-        scoreLabelPlayer1.layer.borderColor = UIColor.whiteColor().CGColor
-        scoreLabelPlayer1.layer.masksToBounds = true
-        scoreLabelPlayer1.layer.borderWidth = 2
-        
-        // Affichage des views player
-        /*var sideSizeProfilPic = CGFloat(50)
-        
-        var profilPicPlayer1View = UIView()
-        var profilPicPlayer2View = UIView()
-        profilPicPlayer1View.addSubview(player1.profilPic)
-        profilPicPlayer2View.addSubview(player2.profilPic)
-        profilPicPlayer1View.frame.size.height = sideSizeProfilPic
-        profilPicPlayer1View.frame.size.width = sideSizeProfilPic
-        profilPicPlayer2View.frame.size.height = sideSizeProfilPic
-        profilPicPlayer2View.frame.size.width = sideSizeProfilPic
-        
-        profilPicPlayer1View.layer.cornerRadius = sideSizeProfilPic/2*/
-        
-        
-        
-        
-        
-        
-
-        
         // Titre
         titre.sizeToFit()
         titre.frame = CGRectMake((self.view.frame.size.width-titre.frame.size.width)/2, 20, titre.frame.size.width, titre.frame.size.height)
@@ -100,8 +60,53 @@ class TicTacToc: GeneralView {
         grid.frame.size.width = backViewWhite.frame.size.width
         grid.frame.size.height = self.view.frame.size.width * (704/659)
         grid.frame.origin.x = 0
-        grid.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10
+        grid.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 2
         //grid.frame.origin.y = (((self.view.frame.size.height-(titre.frame.size.height + titre.frame.origin.y))-grid.frame.size.height)/2) + (titre.frame.size.height + titre.frame.origin.y)
+        
+        //Profil Pic Player 1
+        var xoffset = CGFloat(10)
+        var imageViewPlayer1 = UIImageView(image: player1.profilPic)
+        var spaceInfoPlayer = (backViewWhite.frame.size.height)-(grid.frame.size.height)
+        var profilPicSize = min(spaceInfoPlayer-15 , 90)
+        imageViewPlayer1.frame = CGRectMake(xoffset, (spaceInfoPlayer-profilPicSize)/2, profilPicSize, profilPicSize)
+        imageViewPlayer1.layer.masksToBounds = true
+        imageViewPlayer1.layer.cornerRadius = profilPicSize/2
+        imageViewPlayer1.layer.borderColor = greyColor.CGColor
+        imageViewPlayer1.layer.borderWidth = 2
+        
+        var scoreLabelPlayer1 = UILabel()
+        scoreLabelPlayer1.text = "\(player1.score)"
+        scoreLabelPlayer1.textAlignment = .Center
+        scoreLabelPlayer1.textColor = .whiteColor()
+        var sizeScore = CGFloat(30)
+        var yScore = imageViewPlayer1.frame.origin.y + profilPicSize * (1/2 + sqrt(2)/4)
+        var xScore = imageViewPlayer1.frame.origin.x + profilPicSize*(1/2 + sqrt(2)/4)
+        scoreLabelPlayer1.frame = CGRectMake(xScore - sizeScore/3, yScore - sizeScore/3, sizeScore, sizeScore)
+        scoreLabelPlayer1.layer.cornerRadius = scoreLabelPlayer1.frame.size.height/2
+        scoreLabelPlayer1.backgroundColor = generalColor
+        scoreLabelPlayer1.layer.borderColor = greyColor.CGColor
+        scoreLabelPlayer1.layer.masksToBounds = true
+        scoreLabelPlayer1.layer.borderWidth = 2
+        
+        //Profil Pic Player 2
+        var imageViewPlayer2 = UIImageView(image: player1.profilPic)
+        imageViewPlayer2.frame = CGRectMake((backViewWhite.frame.size.width)-profilPicSize-xoffset, (spaceInfoPlayer-profilPicSize)/2, profilPicSize, profilPicSize)
+        imageViewPlayer2.layer.masksToBounds = true
+        imageViewPlayer2.layer.cornerRadius = profilPicSize/2
+        imageViewPlayer2.layer.borderColor = greyColor.CGColor
+        imageViewPlayer2.layer.borderWidth = 2
+        
+        var scoreLabelPlayer2 = UILabel()
+        scoreLabelPlayer2.text = "\(player2.score)"
+        scoreLabelPlayer2.textAlignment = .Center
+        scoreLabelPlayer2.textColor = .whiteColor()
+        var xScore2 = backViewWhite.frame.size.width - (profilPicSize*(1/2 + sqrt(2)/4))
+        scoreLabelPlayer2.frame = CGRectMake(xScore2 - imageViewPlayer1.frame.origin.x - sizeScore/3,yScore - sizeScore/3, sizeScore, sizeScore)
+        scoreLabelPlayer2.layer.cornerRadius = scoreLabelPlayer1.frame.size.height/2
+        scoreLabelPlayer2.backgroundColor = generalColor
+        scoreLabelPlayer2.layer.borderColor = greyColor.CGColor
+        scoreLabelPlayer2.layer.masksToBounds = true
+        scoreLabelPlayer2.layer.borderWidth = 2
         
         // TopButton
         settingsButton.frame = CGRectMake (5, 20, 25, 25)
@@ -124,8 +129,8 @@ class TicTacToc: GeneralView {
         backViewWhite.addSubview(grid)
         backViewWhite.addSubview(imageViewPlayer1)
         backViewWhite.addSubview(scoreLabelPlayer1)
-//        backViewWhite.addSubview(profilPicPlayer1View)
-  //      backViewWhite.addSubview(profilPicPlayer2View)
+        backViewWhite.addSubview(imageViewPlayer2)
+        backViewWhite.addSubview(scoreLabelPlayer2)
         self.view.addSubview(settingsButton)
         self.view.addSubview(resetButton)
         initCases()
@@ -144,7 +149,7 @@ class TicTacToc: GeneralView {
                 caseToAdd.initView(i,j: j, _papa: self)
                 caseToAdd.frame.size.width = (grid.frame.size.width/3)-2
                 caseToAdd.frame.size.height = (grid.frame.size.height/3)-2
-                caseToAdd.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 10 + (CGFloat(i)*(caseToAdd.frame.height))
+                caseToAdd.frame.origin.y = backViewWhite.frame.height-grid.frame.size.height - 2 + (CGFloat(i)*(caseToAdd.frame.height))
                 caseToAdd.frame.origin.x = (CGFloat(j)*((caseToAdd.frame.size.width)+5))
                 backViewWhite.addSubview(caseToAdd)
                 // Penser à ajouter la case à la matrice de cases

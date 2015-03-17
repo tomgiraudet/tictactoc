@@ -16,13 +16,13 @@ class Player:NSObject{
     var name:String!
     var icon:UIImage!
     var score:Int!
-    var profilPic: UIImageView!
+    var profilPic: UIImage!
     
     func createPlayer (name:String, img:String){
         self.name = name
         self.icon = UIImage(named: img)
         self.score = 0
-        self.profilPic = UIImageView(image: UIImage(named: "default_profilpic.png"))
+        self.profilPic = UIImage(named: "default_profilpic.png")
     }
     
 }
