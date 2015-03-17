@@ -74,6 +74,7 @@ class ModeView: GeneralView {
         multiMode.frame.size.height = imageHeight
         multiMode.frame.size.width = imageWidth
         
+        
         //Initialisation
         backViewWhite.addSubview(choisis_ton_mode_de_jeu)
         backViewWhite.addSubview(soloMode)

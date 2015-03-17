@@ -37,6 +37,7 @@
 		2C7E12BC1AB89B4600D757D2 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B31AB89B4600D757D2 /* SocketParser.swift */; };
 		2C7E12BD1AB89B4600D757D2 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B41AB89B4600D757D2 /* SwiftRegex.swift */; };
 		2C7E12BE1AB89B4600D757D2 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12B51AB89B4600D757D2 /* WebSocket.swift */; };
+		2C7E12C01AB8A55500D757D2 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E12BF1AB8A55500D757D2 /* ModeView.swift */; };
 		2CA715BF1AAE2B1C00148351 /* icon_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BA1AAE2B1C00148351 /* icon_58px.png */; };
 		2CA715C01AAE2B1C00148351 /* icon_80px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BB1AAE2B1C00148351 /* icon_80px.png */; };
 		2CA715C11AAE2B1C00148351 /* icon_87px.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA715BC1AAE2B1C00148351 /* icon_87px.png */; };
@@ -61,7 +62,6 @@
 		81B7EEB41AAB94E0008611DA /* O_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEB01AAB94E0008611DA /* O_white.png */; };
 		81B7EEB51AAB94E0008611DA /* X_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEB11AAB94E0008611DA /* X_black.png */; };
 		81B7EEB61AAB94E0008611DA /* X_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEB21AAB94E0008611DA /* X_white.png */; };
-		81B7EEBA1AAB9BCC008611DA /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7EEB91AAB9BCC008611DA /* ModeView.swift */; };
 		81B7EEBE1AAB9D69008611DA /* duo.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEBB1AAB9D69008611DA /* duo.png */; };
 		81B7EEBF1AAB9D69008611DA /* multijoueur.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEBC1AAB9D69008611DA /* multijoueur.png */; };
 		81B7EEC01AAB9D69008611DA /* solo.png in Resources */ = {isa = PBXBuildFile; fileRef = 81B7EEBD1AAB9D69008611DA /* solo.png */; };
@@ -109,6 +109,7 @@
 		2C7E12B31AB89B4600D757D2 /* SocketParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParser.swift; sourceTree = "<group>"; };
 		2C7E12B41AB89B4600D757D2 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		2C7E12B51AB89B4600D757D2 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		2C7E12BF1AB8A55500D757D2 /* ModeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
 		2CA715BA1AAE2B1C00148351 /* icon_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58px.png; sourceTree = "<group>"; };
 		2CA715BB1AAE2B1C00148351 /* icon_80px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80px.png; sourceTree = "<group>"; };
 		2CA715BC1AAE2B1C00148351 /* icon_87px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_87px.png; sourceTree = "<group>"; };
@@ -137,7 +138,6 @@
 		81B7EEB01AAB94E0008611DA /* O_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = O_white.png; sourceTree = "<group>"; };
 		81B7EEB11AAB94E0008611DA /* X_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X_black.png; sourceTree = "<group>"; };
 		81B7EEB21AAB94E0008611DA /* X_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X_white.png; sourceTree = "<group>"; };
-		81B7EEB91AAB9BCC008611DA /* ModeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModeView.swift; path = ../ModeView.swift; sourceTree = "<group>"; };
 		81B7EEBB1AAB9D69008611DA /* duo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duo.png; sourceTree = "<group>"; };
 		81B7EEBC1AAB9D69008611DA /* multijoueur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multijoueur.png; sourceTree = "<group>"; };
 		81B7EEBD1AAB9D69008611DA /* solo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solo.png; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				2CEC22D61AA64550003C46E2 /* Player.swift */,
 				2CEC22A31AA5F557003C46E2 /* AppDelegate.swift */,
 				2C245F571AB21E1100DC9160 /* Phosphate.ttc */,
-				81B7EEB91AAB9BCC008611DA /* ModeView.swift */,
+				2C7E12BF1AB8A55500D757D2 /* ModeView.swift */,
 				2C132C091AADA7BF001BCBD3 /* SoloMode.swift */,
 				2C132C0B1AADAE2C001BCBD3 /* SoloModeLevelSelection.swift */,
 				2CEC22A81AA5F557003C46E2 /* DuoMode.swift */,
@@ -432,13 +432,13 @@
 				2C7E12B61AB89B4600D757D2 /* SocketAckHandler.swift in Sources */,
 				2C7E12BC1AB89B4600D757D2 /* SocketParser.swift in Sources */,
 				2C7E12BD1AB89B4600D757D2 /* SwiftRegex.swift in Sources */,
+				2C7E12C01AB8A55500D757D2 /* ModeView.swift in Sources */,
 				2C245F531AB20A0B00DC9160 /* GeneralView.swift in Sources */,
 				2CEC22A71AA5F557003C46E2 /* Gam_Insa.xcdatamodeld in Sources */,
 				2C245F511AB2058B00DC9160 /* MultiModeHome.swift in Sources */,
 				2CEC22D81AA64550003C46E2 /* Player.swift in Sources */,
 				2C7E12B81AB89B4600D757D2 /* SocketEvent.swift in Sources */,
 				2C7E12AB1AB88F5000D757D2 /* MutliModeHome.swift in Sources */,
-				81B7EEBA1AAB9BCC008611DA /* ModeView.swift in Sources */,
 				2C7E12BB1AB89B4600D757D2 /* SocketIOClient.swift in Sources */,
 				2C5B63DF1AACA28600CE463D /* SettingsDuoView.swift in Sources */,
 				2CEC22A41AA5F557003C46E2 /* AppDelegate.swift in Sources */,
